@@ -74,8 +74,6 @@ class Visualization extends PureComponent {
                 socket.emit('vote', {latLng: [latLng.lat, latLng.lng]});
                 console.log(getDistInKm({latLng: [55.7558, 37.6178]}, {latLng: [latLng.lat, latLng.lng]}))
             }
-
-            console.log(latLng)
         });
 
     }

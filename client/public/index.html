@@ -54,8 +54,9 @@
     <script>
       var socket = io.connect('http://localhost:7000');
 
-      socket.on('matchstart', () => {
+      socket.on('matchstart', data => {
         console.log('matchstart');
+        console.log(data);
       });
 
       socket.on('matchend', data => {
