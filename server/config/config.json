@@ -1,0 +1,26 @@
+{
+  "port": 7000,
+  "mongoose": {
+    "uri": "mongodb://localhost:27017/geoguru",
+    "options": {
+      "server": {
+        "socketOptions": {
+          "keepAlive": 1
+        }
+      }
+    }
+  },
+  "session": {
+    "secret": "myNameIsss",
+    "key": "sid",
+    "cookie": {
+      "path": "/",
+      "httpOnly": true,
+      "maxAge": null
+    }
+  },
+  "matchIntervals": {
+    "duration": 2000,
+    "pause": 100
+  }
+}

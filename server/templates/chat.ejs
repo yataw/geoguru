@@ -1,0 +1,70 @@
+<% layout('./layout/page') -%>
+<% block('title', 'chat') -%>
+
+<p>Hello, <%= _locals.user.get('username') %></p>
+<p>Chat</p>
+
+<form id="mainForm">
+    <input name="messageInput" id="m" autocomplete="off" autofocus placeholder="msg here"/>
+    <button type="submit">Send</button>
+</form>
+
+<ul id="ul"></ul>
+
+<script>
+  const USER_STATUS = {
+    JOIN: 1,
+    LEAVE: 2
+  }
+
+  function printMessage({data, username})
+  {
+    if (data) {
+      const li = document.createElement('li');
+
+      li.textContent = username + '> ' + data;
+      ul.appendChild(li);
+    }
+  }
+
+  function printStatus(statusCode, username)
+  {
+    const li = document.createElement('li');
+
+    let msg = (statusCode === USER_STATUS.JOIN) ?
+            'Пользователь # вошел в чат' :
+            'Пользователь # вышел из чата';
+    msg = msg.replace('#', username);
+
+    li.textContent = msg;
+    ul.appendChild(li);
+  }
+
+
+  const socket = io();
+  const userInfo = {};
+
+  socket.on('connect', () => {
+  });
+
+  socket.on('userInfo', username => userInfo.username = username);
+
+  socket.on('msg', printMessage);
+  socket.on('join', printStatus.bind(null, USER_STATUS.JOIN))
+  socket.on('leave', printStatus.bind(null, USER_STATUS.LEAVE))
+
+  mainForm.onsubmit = function (e) {
+    socket.emit('msg', m.value, data => {
+      if (data) {
+        const li = document.createElement('li');
+
+        li.textContent = userInfo.username + '> ' + m.value;
+        ul.appendChild(li);
+
+        m.value = '';
+      }
+    });
+
+    e.preventDefault();
+  }
+</script>
