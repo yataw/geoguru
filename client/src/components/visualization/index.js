@@ -22,7 +22,8 @@ class Visualization extends PureComponent {
         console.log('mounted in visualization')
 
         window.jQuery.noConflict();
-        var $ = window.jQuery;
+        var $ = window.jQuery
+        var socket = window.socket
 
         var map = new window.jvm.Map({
             container: $('#world-map'),
@@ -70,6 +71,7 @@ class Visualization extends PureComponent {
                 map.addMarker(markerIndex, {latLng: [latLng.lat, latLng.lng]});
                 markerIndex += 1;
 
+                socket.emit('vote', {latLng: [latLng.lat, latLng.lng]});
                 console.log(getDistInKm({latLng: [55.7558, 37.6178]}, {latLng: [latLng.lat, latLng.lng]}))
             }
 
