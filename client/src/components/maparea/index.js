@@ -1,17 +1,15 @@
 import React, {PureComponent} from 'react'
 import {render} from 'react-dom'
+import {$, socket, types} from 'config'
 import './style.css'
 import colorValues from './colorvalues'
 import {getDistInKm, getRandomColor} from './utils'
-
-var $ = window.jQuery
-window.jQuery.noConflict();
 
 class MapArea extends PureComponent {
     constructor(props) {
         super(props)
 
-        this.socket = window.socket
+        this.socket = socket
         this.id = this.socket.id
         this.clickedInMatch = false;
 
@@ -25,30 +23,14 @@ class MapArea extends PureComponent {
          * }}
          */
         this.markers = {};
-    }
 
-    onClick = e => {
-        if (this.clickedInMatch)
-            return;
-
-        this.clickedInMatch = true;
-
-        let latLng = this.map.pointToLatLng(
-            e.pageX - this.map.container.offset().left,
-            e.pageY - this.map.container.offset().top
-        );
-
-        $(e.target).attr('class');
-
-        this.addMarker(this.id, [latLng.lat, latLng.lng])
-
-        this.socket.on('matchstart', () => {
+        this.socket.on(types.ServerEvents.START, () => {
             this.clickedInMatch = false;
 
             this.map.removeAllMarkers()
         });
 
-        this.socket.on('matchend',
+        this.socket.on(types.ServerEvents.END,
             /**
              * @param {VerboseAnswer} verboseAnswer
              * @param {Object<SocketId, CurrentMatchResult>} current
@@ -65,8 +47,23 @@ class MapArea extends PureComponent {
                 })
 
                 this.map.setFocus({lat: answer[0], lng: answer[1], scale: 2, animate: true})
-        });
+            });
+    }
 
+    onClick = e => {
+        if (this.clickedInMatch)
+            return;
+
+        this.clickedInMatch = true;
+
+        let latLng = this.map.pointToLatLng(
+            e.pageX - this.map.container.offset().left,
+            e.pageY - this.map.container.offset().top
+        );
+
+        $(e.target).attr('class');
+
+        this.addMarker(this.id, [latLng.lat, latLng.lng])
         this.socket.emit('vote', {latLng: [latLng.lat, latLng.lng]})
     }
 
@@ -80,7 +77,6 @@ class MapArea extends PureComponent {
             marker.style = this.getStyle(id)
             this.markers[id] = marker
         }
-        console.log(latLng, id === this.id)
         this.map.addMarker(id, {latLng, style: marker.style})
     }
 
@@ -137,7 +133,7 @@ class MapArea extends PureComponent {
                 regions: [{
                     scale: ['#C8EEFF', '#0071A4'],
                     normalizeFunction: 'polynomial',
-                    colorValues
+                    values: colorValues
                 }]
             }
         });
@@ -153,14 +149,6 @@ class MapArea extends PureComponent {
 MapArea.MarkerIndexes = {
     ANSWER: 0,
     ME: 1
-}
-
-/**
- * @enum {string}
- */
-MapArea.Events = {
-    START: 'matchstart',
-    END: 'matchend',
 }
 
 MapArea.Colors = {

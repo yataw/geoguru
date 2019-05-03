@@ -12,8 +12,6 @@ module.exports = function (server, log) {
 
   io.on('connection', socket => {
     socket.on('vote', data => {
-      log.info(data)
-
       matchRepeater.addVote(socket.id, data.latLng)
     });
 

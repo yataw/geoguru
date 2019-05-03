@@ -91,7 +91,7 @@ class Task {
         const n = Math.floor(Math.random() * length);
         const city = capitals[n];
 
-        this.task = {country: city.country, city: city.city_ascii};
+        this.task = new OuterTask(city.country, city.city_ascii);
         this.info = {...this.task, pupulation: city.population};
         /**
          * @type {Coords}
@@ -100,7 +100,7 @@ class Task {
     }
 
     get() {
-        return new OuterTask(this.task)
+        return this.task;
     }
 
     getVerboseAnswer() {
@@ -116,9 +116,9 @@ class Task {
 }
 
 class OuterTask {
-    constructor(task) {
-        this.answer = task.answer;
-        this.info = task.city;
+    constructor(country, city) {
+        this.country = country;
+        this.city = city;
     }
 }
 

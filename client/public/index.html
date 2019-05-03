@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>React App</title>
+    <title>Geo guru</title>
     <link rel="stylesheet" media="all" href="jvectorMap/jquery-jvectormap.css"/>
 
     <script src="jvectorMap/tests/assets/jquery-1.8.2.js"></script>
@@ -52,18 +52,11 @@
 
     <script src="http://localhost:7000/js/socket.io.js"></script>
     <script>
-      var socket = io.connect('http://localhost:7000');
+      var port = 7000;
+      var origin = 'http://localhost:';
+      var socket = io.connect(origin + port);
 
-/*      socket.on('matchstart', data => {
-        console.log('matchstart');
-        console.log(data);
-      });
-
-      socket.on('matchend', data => {
-        console.log('matchend');
-        console.log(data);
-      });*/
-
+      window.jQuery.noConflict();
     </script>
 
   </head>
