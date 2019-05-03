@@ -21,8 +21,8 @@ module.exports = function (server, log) {
       socket.emit(MatchRepeater.Events.START, task)
     });
 
-    matchRepeater.subscribe(MatchRepeater.Events.END, (usersResults, answer, info) => {
-      socket.emit(MatchRepeater.Events.END, {usersResults, answer, info})
+    matchRepeater.subscribe(MatchRepeater.Events.END, data => {
+      socket.emit(MatchRepeater.Events.END, data)
     });
 
 /*      socket.broadcast.emit('msg', {username, data});

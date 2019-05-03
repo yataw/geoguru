@@ -13,4 +13,15 @@ function getDistInKm(pointA, pointB) {
     return R*Math.acos(cosX);
 }
 
-export {getDistInKm};
+function getRandomColor() {
+    let letters = '0123456789ABCDEF';
+    let color = '#';
+
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+
+    return color;
+}
+
+export {getDistInKm, getRandomColor};

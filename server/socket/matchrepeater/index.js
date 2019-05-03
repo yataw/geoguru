@@ -1,7 +1,8 @@
-const EventEmitter = require('events');
-const config = require('../../config');
-const log = require('../../libs/logger')(module);
+const EventEmitter = require('events')
+const config = require('../../config')
+const log = require('../../libs/logger')(module)
 const capitals = require('../../data/capitals')
+const Summary = require('../summary')
 
 
 class MatchRepeater {
@@ -10,70 +11,38 @@ class MatchRepeater {
         this.timeConf = config.get('matchIntervals')
         this.eartchConf = config.get('earthConsts')
         this.state = MatchRepeater.State.STOPPED;
+                /**
+         * @type {Task}
+         */
+        this.task = null;
 
         /**
          * @type {Object<SocketId, Coords>}
          */
-        this.usersVotes = {};
+        this.summary = new Summary(this.emitter, MatchRepeater.Events);
 
-        /**
-         * 
-         * @type {Object<SocketId, UserResult>}
-         */
-        this.usersResults = {};
-
-        /**
-         * @type {Task}
-         */
-        this.task = [0, 0];
-
-        this.diff = 0;
     }
 
     exec_() {
         if (this.state !== MatchRepeater.State.RUN)
             return;
 
+        this.generateNewTask()
+
+        /** @type {MatchRepeater.EventStartData} */
+        let startAttached = {task: this.task.get()}
+
+        this.emitter.emit(MatchRepeater.Events.START, startAttached)
+
         setTimeout(() => {
-            this.clearVotes()
-            this.generateNewTask();
-            this.emitter.emit(MatchRepeater.Events.START, this.task.get())
+            this.emitter.emit(MatchRepeater.Events.END, {verboseAnswer: this.task.getVerboseAnswer()})
 
-            setTimeout(() => {
-                this.calculatePoints()
-                this.emitter.emit(MatchRepeater.Events.END, this.usersResults, this.task.getAnswer(), this.task.getInfo())
-
-                setTimeout(this.exec_.bind(this), this.timeConf.pause)
-            }, this.timeConf.duration)
-        });
-    }
-    
-    calculatePoints() {
-        Object.keys(this.usersVotes).forEach(socketId => {
-            const vote = this.usersVotes[socketId];
-            const answer = this.task.getAnswer();
-            const R = this.eartchConf.radius;
-            const maxDist = this.eartchConf.maxDist;
-            const lat1 = vote[0] / 360 * 2 * Math.PI;
-            const lat2 = answer[0] / 360 * 2 * Math.PI;
-            const lng1 = vote[1] / 360 * 2 * Math.PI;
-            const lng2 = answer[1] / 360 * 2 * Math.PI;
-
-            const cosX = Math.sin(lat1)*Math.sin(lat2) + Math.cos(lat1)*Math.cos(lat2)*Math.cos(lng1 - lng2);
-            const dist = Math.round(R*Math.acos(cosX));
-            // magic function
-            const points = (Math.pow((maxDist - dist) / maxDist, 3) * 10).toFixed(2);
-
-            this.usersResults[socketId] = new UserResult(dist, points)
-        })
+            setTimeout(this.exec_.bind(this), this.timeConf.pause)
+        }, this.timeConf.duration)
     }
 
     generateNewTask() {
         this.task = new Task();
-    }
-
-    clearVotes() {
-        Object.keys(this.usersVotes).forEach(socketId => this.usersVotes[socketId]= [0, 0])
     }
 
     start() {
@@ -94,13 +63,13 @@ class MatchRepeater {
     }
 
     addVote(socketId, vote) {
-        this.usersVotes[socketId] = vote
+        this.summary.add(socketId, vote)
     }
 }
 
 MatchRepeater.Events = {
     START: 'matchstart',
-    END: 'matchend',
+    END: 'matchend'
 }
 
 MatchRepeater.State = {
@@ -109,7 +78,8 @@ MatchRepeater.State = {
 }
 
 class UserResult {
-    constructor(dist, points) {
+    constructor({vote, dist, points}) {
+        this.vote = vote;
         this.dist = dist;
         this.points = points;
     }
@@ -122,7 +92,7 @@ class Task {
         const city = capitals[n];
 
         this.task = {country: city.country, city: city.city_ascii};
-        this.info = {pupulation: city.population};
+        this.info = {...this.task, pupulation: city.population};
         /**
          * @type {Coords}
          */
@@ -133,10 +103,13 @@ class Task {
         return new OuterTask(this.task)
     }
 
-    getInfo() {
-        return this.info;
+    getVerboseAnswer() {
+        return new VerboseAnswer(this.answer, this.info);
     }
 
+    /**
+     * @returns {Coords}
+     */
     getAnswer() {
         return this.answer;
     }
@@ -144,10 +117,24 @@ class Task {
 
 class OuterTask {
     constructor(task) {
-        this.country = task.country;
-        this.city = task.city;
+        this.answer = task.answer;
+        this.info = task.city;
     }
 }
+
+class VerboseAnswer {
+    constructor(answer, info) {
+        /**
+         * @type {Coords}
+         */
+        this.answer = answer;
+        /**
+         * @type {{coutry: string, city: string, population: number}}
+         */
+        this.info = info;
+    }
+}
+
 
 /**
  * Пара координат lat и lng
@@ -160,5 +147,15 @@ var Coords;
  * @typedef {string}
  */
 var SocketId;
+
+/**
+ * @typedef {{task: OuterTask}}
+ */
+MatchRepeater.EventEndData;
+
+/**
+ * @typedef {{verboseAnswer: VerboseAnswer, current: Object<SocketId, CurrentMatchResult>, total: Object<SocketId, Score>}}
+ */
+MatchRepeater.EventStartData;
 
 module.exports = MatchRepeater;

@@ -21,7 +21,7 @@
   },
   "matchIntervals": {
     "duration": 2000,
-    "pause": 100
+    "pause": 2000
   },
   "earthConsts": {
     "lat": {
