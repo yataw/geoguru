@@ -1,25 +1,21 @@
 import React, {Component} from 'react'
 import {render} from 'react-dom'
-import * as conf from 'config'
+import {socket, init} from 'config'
 import MapArea from './maparea'
 import Cover from './cover'
 import RoundBoard from './roundboard'
+import LeaderBoard from './leaderboard'
 
 import 'bower_components/bootstrap/dist/css/bootstrap.css'
 
 class App extends Component {
     constructor(props) {
         super(props)
-        this.socket = window.socket
+        socket.on('init', data => Object.assign(init, data))
     }
 
     render() {
-        return (
-            <Cover>
-                <RoundBoard />
-                <MapArea height={400} width={1000}/>
-            </Cover>
-        )
+        return <Cover />
     }
 }
 

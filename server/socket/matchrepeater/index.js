@@ -65,6 +65,10 @@ class MatchRepeater {
     addVote(socketId, vote) {
         this.summary.add(socketId, vote)
     }
+
+    erase(socketId) {
+        this.summary.erase(socketId)
+    }
 }
 
 MatchRepeater.Events = {

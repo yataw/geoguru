@@ -45,7 +45,7 @@ class Summary {
             const cosX = Math.sin(lat1)*Math.sin(lat2) + Math.cos(lat1)*Math.cos(lat2)*Math.cos(lng1 - lng2);
             const dist = Math.round(R*Math.acos(cosX));
             // magic function
-            const points = (Math.pow((maxDist - dist) / maxDist, 3) * 10).toFixed(2);
+            const points = +(Math.pow((maxDist - dist) / maxDist, 3) * 10).toFixed(2);
 
             this.current[id] = new CurrentMatchResult({vote, dist, points})
 
@@ -62,6 +62,7 @@ class Summary {
 
     erase(id) {
         delete this.current[id]
+        delete this.total[id]
     }
 
     clear() {

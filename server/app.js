@@ -56,7 +56,8 @@ app.use((req, res, next) => {
 app.use(require('./middleware/sendHttpError'));
 
 app.use(favicon('public/icons/favicon.ico')); // возвращает favicon, если перешли по /favicon.ico
-app.use(express.static('public')); // роут на статические (неизменяемые) ресурсы из директории public
+//app.use(express.static('public')); // роут на статические (неизменяемые) ресурсы из директории public
+app.use(express.static(path.join(__dirname, '../client/build')));
 
 require('./routes')(app); // подключение rout'ов
 

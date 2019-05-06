@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {render} from 'react-dom'
-import {socket, types} from 'config'
+import {socket, types, init} from 'config'
 import Cover from "../cover";
 
 import 'bower_components/bootstrap/dist/css/bootstrap.css'
