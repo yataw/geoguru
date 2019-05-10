@@ -41,6 +41,10 @@ class MatchRepeater {
         }, this.timeConf.duration)
     }
 
+    addPlayer(player) {
+        log.info('add player', player);
+    }
+
     generateNewTask() {
         this.task = new Task();
     }

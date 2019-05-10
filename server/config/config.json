@@ -1,7 +1,6 @@
 {
   "port": 7000,
   "mongoose": {
-    "uri": "mongodb://localhost:27017/geoguru",
     "options": {
       "server": {
         "socketOptions": {
@@ -18,6 +17,15 @@
       "httpOnly": true,
       "maxAge": null
     }
+  },
+  "events": {
+    "CONNECTION": "connection",
+    "SIGNIN": "signin",
+    "SINGOUT": "signout",
+    "DISCONNECT": "disconnect",
+    "START": "matchstart",
+    "END": "matchend",
+    "VOTE": "vote"
   },
   "matchIntervals": {
     "duration": 2000,
