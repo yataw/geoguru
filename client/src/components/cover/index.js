@@ -4,8 +4,10 @@ import {socket, init, types} from 'config'
 import MapArea from "../maparea";
 import RoundBoard from "../roundboard";
 import LeaderBoard from "../leaderboard";
+import Footer from '../footer'
+import 'bower_components/bootstrap/dist/css/bootstrap.css'
 
-class Cover extends Component{
+class Cover extends Component {
     constructor(props) {
         super(props)
 
@@ -17,11 +19,32 @@ class Cover extends Component{
             /**
              * @type {Object<SocketId, Score>}
              */
-            total: {}
+            total: {},
+
+            showNameInput: true,
+
+            user: {}
         }
 
         socket.on(types.ServerEvents.START, this.onStart)
         socket.on(types.ServerEvents.END, this.onEnd)
+        
+        this.nameInput = (
+            <div
+                className="position-fixed w-100 h-100 d-flex justify-content-center align-items-center"
+                style={{left: 0, top: 0, background: 'rgba(0, 0, 0, .5)'}}>
+                <form className="w-25" onSubmit={this.onSubmit}>
+                    <input
+                        className="form-control"
+                        type="text" name="name"
+                        placeholder="Type your name and press enter to start a game"
+                        autoComplete={"off"}
+                        style={{opacity: 1, 'minWidth': 400}}
+                        autoFocus
+                    />
+                </form>
+            </div>
+        )
     }
 
     onStart = () => {
@@ -37,16 +60,39 @@ class Cover extends Component{
         this.setState({current, total})
     }
 
+    onSubmit = e => {
+        this.setState({showNameInput: false, user: {name: e.target.name.value || 'player'}})
+
+        e.preventDefault()
+    }
+
+    showNameInput = () => {
+        if (this.state.showNameInput)
+            return this.nameInput
+
+        return null
+    }
+
     render() {
         return (
-            <div className="container-fluid">
-                <div className={"jumbotron"}>
+            <div className="container-fluid vw-100 vh-100">
+                <div className="row h-10">
                     <RoundBoard/>
-                    <div className={"row"} style={{height: 400}}>
-                        <MapArea height={'100%'} width={'75%'}/>
-                        <LeaderBoard height={'100%'} width={'25%'} current={this.state.current} total={this.state.total}/>
+                </div>
+                <div className="row h-50" >
+                    <div className="col-sm-8 px-1">
+                        <MapArea height={'100%'} width={'100%'}/>
+                    </div>
+                    <div className="col-sm-4">
+                        <LeaderBoard current={this.state.current} total={this.state.total}/>
                     </div>
                 </div>
+
+                <Footer />
+
+
+
+                {this.showNameInput()}
             </div>
         )
     }
