@@ -22,7 +22,7 @@ class SocketController {
             const id = socket.id
 
             socket.on(Events.SIGNIN, player => {
-                this.matchRepeater.addPlayer(player)
+                this.matchRepeater.addPlayer(id, player)
             })
 
             socket.on(Events.VOTE, data => {
@@ -30,7 +30,7 @@ class SocketController {
             });
 
             socket.on(Events.DISCONNECT, () => {
-                this.matchRepeater.erase(id)
+                this.matchRepeater.erasePlayer(id);
             });
 
             this.matchRepeater.subscribe(Events.START, task => {

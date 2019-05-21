@@ -39,6 +39,8 @@ class MapArea extends PureComponent {
             ({verboseAnswer, current, total}) => {
                 const {answer, info} = verboseAnswer;
 
+                this.clickedInMatch = true;
+
                 this.addMarker(MapArea.MarkerIndexes.ANSWER, answer)
                 Object.keys(current).forEach(id => {
                     let vote = current[id].vote

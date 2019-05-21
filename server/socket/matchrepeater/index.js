@@ -3,15 +3,24 @@ const config = require('../../config')
 const log = require('../../libs/logger')(module)
 const capitals = require('../../data/capitals')
 const Summary = require('../summary')
-
+const Player = require('../player')
 
 class MatchRepeater {
     constructor() {
         this.emitter = new EventEmitter();
         this.timeConf = config.get('matchIntervals')
         this.eartchConf = config.get('earthConsts')
+
+        /**
+         * @type {Object<SocketId, Player>}
+         */
+        this.players = {};
+        /**
+         * @type {Object<SocketId, Player>}
+         */
+        this.waiting_players = {};
         this.state = MatchRepeater.State.STOPPED;
-                /**
+        /**
          * @type {Task}
          */
         this.task = null;
@@ -19,8 +28,7 @@ class MatchRepeater {
         /**
          * @type {Object<SocketId, Coords>}
          */
-        this.summary = new Summary(this.emitter, MatchRepeater.Events);
-
+        this.summary = new Summary(this.emitter);
     }
 
     exec_() {
@@ -32,17 +40,31 @@ class MatchRepeater {
         /** @type {MatchRepeater.EventStartData} */
         let startAttached = {task: this.task.get()}
 
-        this.emitter.emit(MatchRepeater.Events.START, startAttached)
+        this.emitter.emit(config.get('events').START, startAttached)
 
         setTimeout(() => {
-            this.emitter.emit(MatchRepeater.Events.END, {verboseAnswer: this.task.getVerboseAnswer()})
+            this.emitter.emit(config.get('events').END, {verboseAnswer: this.task.getVerboseAnswer()})
 
             setTimeout(this.exec_.bind(this), this.timeConf.pause)
         }, this.timeConf.duration)
     }
 
-    addPlayer(player) {
-        log.info('add player', player);
+    addPlayer(id, player) {
+        const newcomer = new Player(player);
+
+        if (this.state === MatchRepeater.State.RUN) {
+            this.waiting_players[id] = newcomer;
+        } else {
+            this.players[id] = newcomer;
+        }
+
+        socket.broadcast.emit(config.get('events').JOIN, newcomer.getName());
+        log.info('add player ', newcomer.getName());
+    }
+
+    erasePlayer(id) {
+        this.summary.erase(id);
+        delete this.players[id];
     }
 
     generateNewTask() {
@@ -69,15 +91,6 @@ class MatchRepeater {
     addVote(socketId, vote) {
         this.summary.add(socketId, vote)
     }
-
-    erase(socketId) {
-        this.summary.erase(socketId)
-    }
-}
-
-MatchRepeater.Events = {
-    START: 'matchstart',
-    END: 'matchend'
 }
 
 MatchRepeater.State = {
@@ -86,10 +99,10 @@ MatchRepeater.State = {
 }
 
 class UserResult {
-    constructor({vote, dist, points}) {
+    constructor({vote, dist, score}) {
         this.vote = vote;
         this.dist = dist;
-        this.points = points;
+        this.score = score;
     }
 }
 

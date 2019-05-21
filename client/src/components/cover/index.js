@@ -61,7 +61,9 @@ class Cover extends Component {
     }
 
     onSubmit = e => {
-        this.setState({showNameInput: false, user: {name: e.target.name.value || 'player'}})
+        this.setState({showNameInput: false, user: {name: e.target.name.value || 'player'}}, () => {
+            socket.emit(types.ServerEvents.SIGNIN, this.state.user)
+        })
 
         e.preventDefault()
     }
@@ -75,7 +77,7 @@ class Cover extends Component {
 
     render() {
         return (
-            <div className="container-fluid vw-100 vh-100">
+            <div className="container-fluid vw-98 vh-100">
                 <div className="row h-10">
                     <RoundBoard/>
                 </div>

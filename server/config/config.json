@@ -21,11 +21,12 @@
   "events": {
     "CONNECTION": "connection",
     "SIGNIN": "signin",
-    "SINGOUT": "signout",
+    "SIGNOUT": "signout",
     "DISCONNECT": "disconnect",
     "START": "matchstart",
     "END": "matchend",
-    "VOTE": "vote"
+    "VOTE": "vote",
+    "JOIN": "join"
   },
   "matchIntervals": {
     "duration": 2000,

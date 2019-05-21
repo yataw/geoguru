@@ -3,9 +3,8 @@ const config = require('../../config');
 class Summary {
     /**
      * @param emitter
-     * @param {MatchRepeater.Events} events
      */
-    constructor(emitter, events) {
+    constructor(emitter) {
         /**
          * @type {Object<SocketId, CurrentMatchResult>}
          */
@@ -17,8 +16,8 @@ class Summary {
         this.total = {}
         this.conf = config.get('earthConsts')
 
-        emitter.on(events.START, this.clear.bind(this))
-        emitter.on(events.END, data => {
+        emitter.on(config.get('events').START, this.clear.bind(this))
+        emitter.on(config.get('events').END, data => {
             this.upd(data.verboseAnswer)
 
             /**
@@ -45,14 +44,14 @@ class Summary {
             const cosX = Math.sin(lat1)*Math.sin(lat2) + Math.cos(lat1)*Math.cos(lat2)*Math.cos(lng1 - lng2);
             const dist = Math.round(R*Math.acos(cosX));
             // magic function
-            const points = +(Math.pow((maxDist - dist) / maxDist, 3) * 10).toFixed(2);
+            const score = +(Math.pow((maxDist - dist) / maxDist, 3) * 10).toFixed(2);
 
-            this.current[id] = new CurrentMatchResult({vote, dist, points})
+            this.current[id] = new CurrentMatchResult({vote, dist, score})
 
             if (this.total[id])
-                this.total[id].add(points)
+                this.total[id].add(score)
             else
-                this.total[id] = new Score(points)
+                this.total[id] = new Score(score)
         })
     }
 
@@ -77,23 +76,23 @@ class Summary {
 }
 
 /**
- * dist и points вычисляются в upd
+ * dist и score вычисляются в upd
  */
 class CurrentMatchResult {
-    constructor({vote, dist, points}) {
+    constructor({vote, dist, score}) {
         this.vote = vote;
         this.dist = dist;
-        this.points = points;
+        this.score = score;
     }
 }
 
 class Score {
-    constructor(points) {
-        this.points = points;
+    constructor(score) {
+        this.score = score;
     }
 
-    add(points) {
-        this.points += points;
+    add(score) {
+        this.score += score;
     }
 }
 
