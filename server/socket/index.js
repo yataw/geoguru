@@ -2,6 +2,7 @@ const cookie = require('cookie');
 const config = require('../config');
 const MatchRepeater = require('./matchrepeater')
 const HttpError = require('../error').HttpError;
+const Player = require('./player')
 const log = require('../libs/logger')(module);
 
 class SocketController {
@@ -22,7 +23,20 @@ class SocketController {
             const id = socket.id
 
             socket.on(Events.SIGNIN, player => {
-                this.matchRepeater.addPlayer(id, player)
+                const newcomer = new Player(player);
+
+                // TODO refactor (оповестить о предыдущих игроках)
+                const allPlayers = Object.assign({}, this.matchRepeater.players, this.matchRepeater.waiting_players);
+
+                Object.keys(allPlayers).forEach(otherId => {
+                    socket.emit(config.get('events').JOIN, {id: otherId, player: allPlayers[otherId]})
+                })
+
+                this.matchRepeater.addPlayerToQueue(id,  player)
+
+                console.log(player)
+                socket.broadcast.emit(config.get('events').JOIN, {id, player: newcomer});
+
             })
 
             socket.on(Events.VOTE, data => {
@@ -31,6 +45,7 @@ class SocketController {
 
             socket.on(Events.DISCONNECT, () => {
                 this.matchRepeater.erasePlayer(id);
+                socket.broadcast.emit(Events.SIGNOUT, id)
             });
 
             this.matchRepeater.subscribe(Events.START, task => {

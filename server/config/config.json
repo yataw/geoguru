@@ -1,5 +1,5 @@
 {
-  "port": 7000,
+  "port": 80,
   "mongoose": {
     "options": {
       "server": {
@@ -29,7 +29,7 @@
     "JOIN": "join"
   },
   "matchIntervals": {
-    "duration": 2000,
+    "duration": 5000,
     "pause": 2000
   },
   "earthConsts": {

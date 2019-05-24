@@ -5,9 +5,6 @@ Leaderboard
 --------------------*/
 .leaderboard {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     border-radius: 10px;
     box-shadow: 0 7px 30px rgba(62, 9, 11, .3);
 
@@ -93,6 +90,7 @@ Leaderboard
             }
 
             small {
+                font-size: 14px;
                 position: relative;
                 color: #2E2E7D;
                 z-index: 2;
@@ -116,14 +114,12 @@ Leaderboard
             }
 
             &:nth-child(6) {
-                background: #507CC2;
                 &::after {
                     background: #507CC2;
                 }
             }
 
             &:nth-child(7) {
-                background: #507CC2;
                 &::after {
                     background: #507CC2;
                     box-shadow: 0 2px 0 rgba(0, 0, 0, .08);
@@ -138,7 +134,6 @@ Leaderboard
             }
 
             &:nth-child(8) {
-                background: #507CC2;
                 &::after {
                     background: #507CC2;
                     box-shadow: 0 1px 0 rgba(0, 0, 0, .11);
@@ -153,7 +148,6 @@ Leaderboard
             }
 
             &:nth-child(9) {
-                background: #507CC2;
                 &::after {
                     background: #507CC2;
                     box-shadow: 0 -1px 0 rgba(0, 0, 0, .15);
@@ -170,7 +164,6 @@ Leaderboard
             }
 
             &:nth-child(10) {
-                background: #507CC2;
                 border-radius: 0 0 10px 10px;
                 &::after {
                     background: #507CC2;
@@ -193,7 +186,6 @@ Leaderboard
         // hover
         li:hover {
             z-index: 2;
-            overflow: visible;
 
             &::after {
                 opacity: 1;

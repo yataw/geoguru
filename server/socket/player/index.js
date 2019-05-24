@@ -12,3 +12,5 @@ class Player {
         return this.name
     }
 }
+
+module.exports = Player

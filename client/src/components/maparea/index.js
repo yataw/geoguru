@@ -8,7 +8,6 @@ import {getDistInKm, getRandomColor} from './utils'
 class MapArea extends PureComponent {
     constructor(props) {
         super(props)
-
         this.socket = socket
         this.id = this.socket.id
         this.clickedInMatch = false;
@@ -33,17 +32,17 @@ class MapArea extends PureComponent {
         this.socket.on(types.ServerEvents.END,
             /**
              * @param {VerboseAnswer} verboseAnswer
-             * @param {Object<SocketId, CurrentMatchResult>} current
-             * @param {Object<SocketId, Score>} total
+             * @param {Object<SocketId, Score>} score
+             * @param {Object<SocketId, Summary.Vote>} lastVotes
              */
-            ({verboseAnswer, current, total}) => {
+            ({verboseAnswer, score, lastVotes}) => {
                 const {answer, info} = verboseAnswer;
 
                 this.clickedInMatch = true;
 
                 this.addMarker(MapArea.MarkerIndexes.ANSWER, answer)
-                Object.keys(current).forEach(id => {
-                    let vote = current[id].vote
+                Object.keys(lastVotes).forEach(id => {
+                    let vote = lastVotes[id]
 
                     this.addMarker(id, vote)
                 })
@@ -66,7 +65,7 @@ class MapArea extends PureComponent {
         $(e.target).attr('class');
 
         this.addMarker(this.id, [latLng.lat, latLng.lng])
-        this.socket.emit('vote', {latLng: [latLng.lat, latLng.lng]})
+        this.socket.emit(types.ServerEvents.VOTE, {latLng: [latLng.lat, latLng.lng]})
     }
 
     addMarker = (id, latLng) => {
@@ -107,6 +106,9 @@ class MapArea extends PureComponent {
 
     onMarkerTipShow = (e, label, id) => {
         let latLng = this.markers[id].latLng;
+
+        if (!latLng)
+            return
 
         this.map.tip.text(latLng[0].toFixed(2) + ', ' + latLng[1].toFixed(2));
     }

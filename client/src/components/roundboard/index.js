@@ -50,7 +50,7 @@ class RoundBoard extends Component {
             <div className={'mx-auto text-center p-3'}>
                 <div className="progress">
                     <div className="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
-                         aria-valuemax="100" style={{width: Math.ceil(this.state.time * 75) + '%'}}>
+                         aria-valuemax="100" style={{width: Math.ceil(this.state.time * 22) + '%'}}>
                         {this.state.time}
                     </div>
                 </div>

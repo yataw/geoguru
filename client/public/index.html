@@ -50,12 +50,15 @@
     <script src="jvectorMap/tests/assets/jquery-jvectormap-us-lcc-en.js"></script>
     <script src="jvectorMap/tests/assets/jquery-jvectormap-us-merc-en.js"></script>
 
+    <script src="notify.js"></script>
+
+
     <script src="js/socket.io.js"></script>
     <script>
-        var port = 7000;
+/*        var port = 7000;
         var origin = 'http://localhost:';
-        var socket = io.connect(origin + port);
-        /*var socket = io.connect();*/
+        var socket = io.connect(origin + port);*/
+        var socket = io.connect();
 
         window.jQuery.noConflict();
     </script>

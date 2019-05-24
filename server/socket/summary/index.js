@@ -1,20 +1,20 @@
 const config = require('../../config');
+const log = require('../../libs/logger')(module)
 
 class Summary {
     /**
      * @param emitter
      */
     constructor(emitter) {
-        /**
-         * @type {Object<SocketId, CurrentMatchResult>}
-         */
-        this.current = {}
-
+        this.conf = config.get('earthConsts')
         /**
          * @type {Object<SocketId, Score>}
          */
-        this.total = {}
-        this.conf = config.get('earthConsts')
+        this.score = {}
+        /**
+         * @type {Object<SocketId, Summary.Vote>}
+         */
+        this.lastVotes = {}
 
         emitter.on(config.get('events').START, this.clear.bind(this))
         emitter.on(config.get('events').END, data => {
@@ -26,13 +26,17 @@ class Summary {
              *
              * @type {MatchRepeater.EventEndData}
              */
-            let mutableResult = Object.assign(data, {current: this.current}, {total: this.total})
+            let mutableResult = Object.assign(data, this.get())
         })
     }
 
     upd(verboseAnswer) {
-        Object.keys(this.current).forEach(id => {
-            const vote = this.current[id].vote;
+        Object.keys(this.lastVotes).forEach(id => {
+            const vote = this.lastVotes[id]
+
+            if (!vote)
+                return
+
             const answer = verboseAnswer.answer;
             const R = this.conf.radius;
             const maxDist = this.conf.maxDist;
@@ -44,56 +48,70 @@ class Summary {
             const cosX = Math.sin(lat1)*Math.sin(lat2) + Math.cos(lat1)*Math.cos(lat2)*Math.cos(lng1 - lng2);
             const dist = Math.round(R*Math.acos(cosX));
             // magic function
-            const score = +(Math.pow((maxDist - dist) / maxDist, 3) * 10).toFixed(2);
+            const score = +(Math.pow((maxDist - dist) / maxDist, 3) * 10);
 
-            this.current[id] = new CurrentMatchResult({vote, dist, score})
-
-            if (this.total[id])
-                this.total[id].add(score)
-            else
-                this.total[id] = new Score(score)
+            this.score[id].add(score, dist)
         })
     }
 
+    /**
+     * Добавить голос
+     */
     add(id, vote) {
-        this.current[id] = new CurrentMatchResult({vote})
+        this.lastVotes[id] = vote
+    }
+
+    addPlayer(id) {
+        this.score[id] = new Score();
     }
 
     erase(id) {
-        delete this.current[id]
-        delete this.total[id]
+        delete this.score[id]
+        delete this.lastVotes[id]
     }
 
     clear() {
-        Object.keys(this.current).forEach(socketId => {
-            this.current[socketId] = {...this.current[socketId], vote: [0, 0]}
+        Object.keys(this.score).forEach(id => {
+            this.score[id].clear();
+            this.lastVotes[id] = null;
         })
     }
 
     get() {
-        return {current: this.current, total: this.total}
+        return {score: this.score, lastVotes: this.lastVotes}
     }
 }
 
 /**
- * dist и score вычисляются в upd
+ * lat и lng
+ *
+ * @typeof {Array<number>}
  */
-class CurrentMatchResult {
-    constructor({vote, dist, score}) {
-        this.vote = vote;
-        this.dist = dist;
-        this.score = score;
-    }
-}
+Summary.Vote;
 
 class Score {
-    constructor(score) {
-        this.score = score;
+    constructor() {
+        /**
+         * dist - разница между правильным ответом и ответом пользователя в км.
+         *
+         * @type {{dist: ?number, score: number}}
+         */
+        this.last = {dist: null, score: 0};
+
+        /** @type {{score: number}}*/
+        this.total = {score: 0};
     }
 
-    add(score) {
-        this.score += score;
+    add(score, dist) {
+        this.last = {dist, score};
+        this.total.score += score;
+    }
+
+    clear() {
+        this.last = {dist: null, score: 0};
     }
 }
+
+
 
 module.exports = Summary

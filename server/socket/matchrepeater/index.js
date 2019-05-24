@@ -8,6 +8,7 @@ const Player = require('../player')
 class MatchRepeater {
     constructor() {
         this.emitter = new EventEmitter();
+        this.emitter.setMaxListeners(999);
         this.timeConf = config.get('matchIntervals')
         this.eartchConf = config.get('earthConsts')
 
@@ -32,7 +33,7 @@ class MatchRepeater {
     }
 
     exec_() {
-        if (this.state !== MatchRepeater.State.RUN)
+        if (this.state === MatchRepeater.State.STOPPED)
             return;
 
         this.generateNewTask()
@@ -40,30 +41,44 @@ class MatchRepeater {
         /** @type {MatchRepeater.EventStartData} */
         let startAttached = {task: this.task.get()}
 
+        this.addPlayers()
         this.emitter.emit(config.get('events').START, startAttached)
+        this.state = MatchRepeater.State.GAME
 
         setTimeout(() => {
             this.emitter.emit(config.get('events').END, {verboseAnswer: this.task.getVerboseAnswer()})
+            this.state = MatchRepeater.State.PAUSE
 
             setTimeout(this.exec_.bind(this), this.timeConf.pause)
         }, this.timeConf.duration)
     }
 
-    addPlayer(id, player) {
+    addPlayerToQueue(id, player) {
         const newcomer = new Player(player);
 
-        if (this.state === MatchRepeater.State.RUN) {
+        if (this.state === MatchRepeater.State.GAME) {
             this.waiting_players[id] = newcomer;
-        } else {
+        } else if (this.state === MatchRepeater.State.PAUSE) {
             this.players[id] = newcomer;
+            this.summary.addPlayer(id)
         }
 
-        socket.broadcast.emit(config.get('events').JOIN, newcomer.getName());
         log.info('add player ', newcomer.getName());
+    }
+
+    addPlayers() {
+        Object.keys(this.waiting_players).forEach(id => {
+            this.players[id] = this.waiting_players[id];
+            this.summary.addPlayer(id)
+        })
+
+        this.waiting_players = {}
     }
 
     erasePlayer(id) {
         this.summary.erase(id);
+
+        delete this.waiting_players[id];
         delete this.players[id];
     }
 
@@ -88,13 +103,16 @@ class MatchRepeater {
         this.emitter.off(eventType, callback);
     }
 
-    addVote(socketId, vote) {
-        this.summary.add(socketId, vote)
+    addVote(id, vote) {
+        if (this.players[id])
+            this.summary.add(id, vote);
     }
 }
 
 MatchRepeater.State = {
     RUN: 'run',
+    GAME: 'game',
+    PAUSE: 'pause',
     STOPPED: 'stopped',
 }
 

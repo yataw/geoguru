@@ -1,22 +1,41 @@
 import React, {Component} from 'react'
 import {render} from 'react-dom'
 import {socket, types, init} from 'config'
-import Card from '../card'
+import RoundBoard from "../roundboard";
+import MapArea from "../maparea";
+import Footer from "../footer";
 
+import 'bower_components/bootstrap/dist/css/bootstrap.css'
 import './style.scss'
 
 
 class LeaderBoard extends Component {
     constructor(props) {
         super(props)
-
     }
 
     render() {
-        const {current, total, width} = this.props
+        const {players, score} = this.props
+        /**
+         * TODO Момент регистрации пользователя произойдет после события END
+         * При этом при Join и первом End прилетает пустой score
+         * Сейчас фиксим вручную
+         */
+        const sorted = Object.keys(players).map(id => {
+            if (!score[id])
+                score[id] = new Score()
+
+            return {
+                id,
+                name: players[id].name,
+                dist: score[id].last.dist,
+                lastScore: score[id].last.score,
+                totalScore: score[id].total.score
+            }
+        }).sort((a, b) => b.totalScore - a.totalScore)
 
         return (
-                <div className="leaderboard container-fluid h-100">
+                <div className="leaderboard container-fluid h-100" style={{overflowY: 'auto', overflowX: 'hidden'}}>
                     <h1>
                         <svg>
                             <use xlinkHref='#cup'/>
@@ -24,36 +43,53 @@ class LeaderBoard extends Component {
                         Leaderboard
                     </h1>
                     <ol>
-                        <li>
-                            <mark>Luckia Lake</mark>
-                            <small>100</small>
-                        </li>
-                        <li>
-                            <mark>Los mierder</mark>
-                            <small>301</small>
-                        </li>
-                        <li>
-                            <mark>Paquito trae pan</mark>
-                            <small>292</small>
-                        </li>
-                        <li>
-                            <mark>Madrileños</mark>
-                            <small>245</small>
-                        </li>
-                        <li>
-                            <mark>Chotillos</mark>
-                            <small>203</small>
-                        </li>
+                        {
+                            sorted.map(({id, name, dist, lastScore, totalScore}) => {
+                                console.log(dist)
+                                return (
+                                    <li key={id}>
+                                        <mark>{name}</mark>
+                                        <small>
+                                            <div className="d-flex justify-content-end align-items-end">
+                                                <span>
+                                                    accuracy: <span className={dist ? 'px-3' : 'px-3 text-danger'}>
+                                                    {dist ? dist.toFixed(0) + 'km' : 'null'}
+                                                </span>
+                                                </span>
+                                                <span className="px-3 text-success">total: {totalScore.toFixed(2)}</span>
+                                            </div>
+
+                                        </small>
+                                    </li>
+                                )
+                            })
+                        }
                     </ol>
-                    {/*            <div className="container-fluid h-100" style={{overflowY: 'auto', background: 'pink'}}>
-                {Object.keys(total).map(key =>
-                    <div className="row h-15" key={key}>
-                        <Card data={{key, current: current[key], total: total[key]}}/>
-                    </div>)
-                }
-            </div>*/}
                 </div>
         )
+    }
+}
+
+class Score {
+    constructor() {
+        /**
+         * dist - разница между правильным ответом и ответом пользователя в км.
+         *
+         * @type {{dist: ?number, score: number}}
+         */
+        this.last = {dist: null, score: 0};
+
+        /** @type {{score: number}}*/
+        this.total = {score: 0};
+    }
+
+    add(score, dist) {
+        this.last = {dist, score};
+        this.score += score;
+    }
+
+    clear() {
+        this.last = {dist: null, score: 0};
     }
 }
 
