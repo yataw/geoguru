@@ -139,7 +139,8 @@ class MapArea extends PureComponent {
                     normalizeFunction: 'polynomial',
                     values: colorValues
                 }]
-            }
+            },
+            onRegionTipShow: function(e){e.preventDefault()},
         });
 
         this.map.container.click(this.onClick);

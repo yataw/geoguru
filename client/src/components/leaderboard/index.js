@@ -45,7 +45,6 @@ class LeaderBoard extends Component {
                     <ol>
                         {
                             sorted.map(({id, name, dist, lastScore, totalScore}) => {
-                                console.log(dist)
                                 return (
                                     <li key={id}>
                                         <mark>{name}</mark>
