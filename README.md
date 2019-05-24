@@ -30,12 +30,12 @@ http://w89301.vdi.mipt.ru/
 ## TODO
 
 ### Stage 1
-- [ ] Имя пользователя
-- [ ] Верстка liderboard
-- [ ] Footer
+- [x] Имя пользователя
+- [x] Верстка liderboard
+- [x] Footer
 
 ### Stage 2
-- [ ] Архитектура клиент-серверного взаимодействия
+- [x] Архитектура клиент-серверного взаимодействия
 - [ ] Раунды
 - [ ] Continues integration
 - [ ] Боты
@@ -43,11 +43,12 @@ http://w89301.vdi.mipt.ru/
 
 ## Requirements
 
-В разработке...
+Протестировано на (работает более-менее стабильно):
 
-* Chrome >=...
-* IE >=...
-* Chrome for android >= ...
+* Chrome 65+
+* FF 60+
+* Chrome for android 70+
+
 
 ## Authors
 
