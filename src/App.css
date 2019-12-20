@@ -495,7 +495,7 @@ body {
     top: 50%;
     transform: translate(-50%, -50%);
     width: 40%;
-    height: 20%;
+    height: 25rem;
     background-color: #fff;
     box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
     border-radius: 3px;
