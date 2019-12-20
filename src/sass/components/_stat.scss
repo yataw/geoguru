@@ -1,0 +1,34 @@
+
+.table-viewport {
+    height: 10rem;
+    // TODO восстановить min-width
+    //min-width: 30rem;
+}
+
+.stat {
+    &__name {
+        white-space:nowrap;
+    }
+
+    &__img {
+        max-width: 2rem;
+        max-height: 2rem;
+    }
+
+/*    &__item {
+        padding: 2rem 1rem;
+        display: flex;
+        flex: 0 0 100%;
+        justify-content: space-evenly;
+        border-left: 2px solid transparent;
+        transition: border-left-color .2s;
+        cursor: pointer;
+
+
+        &:hover {
+            border-left: 2px solid var(--color-accent);
+            background-color: var(--color-secondary);
+
+        }
+    }*/
+}

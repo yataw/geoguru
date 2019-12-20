@@ -1,0 +1,74 @@
+
+.pie-cont {
+    position: absolute;
+    background-color: inherit;
+
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 2000px;
+    height: 2000px;
+    
+    &__element {
+        width: 50%;
+        height: 100%;
+        transform-origin: 100% 50%;
+        position: absolute;
+        background: var(--game-status-color);
+    }
+
+    &__spinner {
+        border-radius: 100% 0 0 100% / 50% 0 0 50%;
+        z-index: 200;
+        animation: pit-rotate 10s linear forwards;
+    }
+    
+    &__filler {
+        border-radius: 0 100% 100% 0 / 0 50% 50% 0;
+        left: 50%;
+        opacity: 0;
+        z-index: 100;
+        animation: pie-opacity 10s steps(1, end) reverse forwards;
+    }
+    
+    &__mask {
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        background: inherit;
+        opacity: 1;
+        z-index: 300;
+        animation: pie-opacity 10s steps(1, end) forwards;
+    }
+
+    /* TODO: нужен ли animation-play-state? */
+/*
+    .pie-cont__spinner,
+    .pie-cont__filler,
+    .pie-cont__mask {
+        animation-play-state: var(--game-state) !important;
+    }
+    */
+    
+    
+}
+
+@keyframes pit-rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pie-opacity {
+    0% {
+        opacity: 1;
+    }
+    50%,
+    100% {
+        opacity: 0;
+    }
+}

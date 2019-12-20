@@ -1,0 +1,40 @@
+
+.game {
+    grid-column: 4 / 9;
+
+    position: relative;
+    overflow: hidden;
+    background-color: var(--color-primary);
+
+    &__content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        width: calc(100% - 12px);
+        height: calc(100% - 12px);
+        z-index: 500;
+
+        display: flex;
+        flex-direction: column;
+
+        background-color: var(--color-primary);
+
+        &-substrate {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 450;
+        }
+    }
+
+    &__statusbar {
+        flex: 0 0 6rem;
+    }
+
+    &__map {
+        height: calc(100% - 6rem);
+        z-index: 1000;
+    }
+}

@@ -1,0 +1,78 @@
+
+.chat {
+    grid-column: 9 / 12;
+
+    background-color: var(--color-primary);
+    color: var(--color-text);
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+    //width: 300px;
+
+    &__icon-people {
+        width: 2rem;
+        height: 2rem;
+        margin-right: .5rem;
+        fill: var(--color-text);
+    }
+
+    &__header {
+        flex: 0 0 10%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: var(--font-size-big);
+        font-weight: 600;
+    }
+
+    &__message-box {
+        flex: 1 0;
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
+    }
+
+    &__create-msg {
+        position: relative;
+        padding: 1rem;
+        flex: 0 0 5.5rem;
+    }
+
+    &__icon-send {
+        position: absolute;
+        right: 2rem;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all .2s;
+
+        width: 2rem;
+        height: 2rem;
+
+        fill: var(--color-text);
+        cursor: pointer;
+
+        &:hover {
+            fill: var(--color-accent);
+        }
+    }
+
+    &__input {
+        width: 100%;
+        height: 100%;
+        border-radius: 3px;
+        padding: .2rem 3.5rem .2rem 1rem;
+        background-color: var(--color-primary-dark);
+        color: var(--color-text);
+        font-family: inherit;
+        font-size: inherit;
+        transition: all .2s;
+        outline: none;
+        border: 2px solid transparent;
+
+        &:focus {
+            border: 2px solid var(--color-accent-dark);
+        }
+    }
+}

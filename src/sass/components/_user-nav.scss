@@ -1,0 +1,51 @@
+.user-nav {
+    display: flex;
+    align-self: stretch;
+    flex: 0 0 100%;
+
+    align-items: center;
+
+    &__settings,
+    &__statistics,
+    &__user {
+        display: flex;
+        align-items: center;
+        align-self: stretch;
+        cursor: pointer;
+        padding: 0 1rem;
+        border-bottom: 2px solid transparent;
+        transition: border-bottom-color .2s;
+
+        &:hover {
+            background-color: var(--color-secondary);
+            border-bottom: 2px solid var(--color-accent);
+        }
+    }
+
+    &__settings {
+    }
+
+    &__statistics {
+        justify-self: flex-end;
+        margin-left: auto;
+    }
+
+    &__user {
+        display: flex;
+        align-items: center;
+    }
+
+    &__photo {
+        width: 3rem;
+        height: 3rem;
+        fill: var(--color-accent);
+
+        margin-right: 0.5rem;
+    }
+
+    &__icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        fill: var(--color-accent);
+    }
+}

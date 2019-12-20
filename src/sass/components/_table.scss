@@ -1,0 +1,27 @@
+
+.table {
+    padding: 0 1rem;
+    margin: 0 auto;
+    overflow: hidden;
+
+    &-viewport {
+        height: 10rem;
+        // TODO восстановить min-width
+        //min-width: 30rem;
+        overflow-x: hidden;
+    }
+
+    & td {
+        padding: 1rem 0.5rem 0.2rem;
+        transition: border-bottom-color .2s;
+    }
+
+    & tr td:not(:last-child) {
+        text-align: center;
+        border-bottom: 1px solid var(--color-primary-dark);
+    }
+
+    & tr:hover td:not(:last-child) {
+        border-bottom: 1px solid var(--color-accent);
+    }
+}

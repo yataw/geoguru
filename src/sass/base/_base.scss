@@ -1,0 +1,64 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  // this defines what 1 rem is
+  font-size: 62.5%; // 1rem = 10px
+
+/*  @include respond(big-desktop) {
+    font-size: 75%; // 1 rem = 12px
+  }
+
+  @include respond(tab-land) {
+    font-size: 56.25%; // 1 rem = 9px
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; // 1 rem = 8px
+  }*/
+}
+
+.root {
+  font-size: 1.5rem;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: [page-start]  2fr [main-start] repeat(10, [col-start] minmax(min-content, 1fr) [col-end]) [main-end] 2fr [page-end];
+  grid-template-rows: [header-start] 5vh [header-end main-start] 90vh [main-end footer-start] 5vh [footer-end page-end];
+}
+
+$color-white: #fff;
+$color-black: #000;
+
+:root {
+  --color-primary: #212529;
+  --color-secondary: #2b2f34;
+  --color-primary-light: #CFD8DC;
+  --color-primary-dark: #455A64;
+  --color-accent: #03A9F4;
+  --color-accent-dark: #037bc2;
+  --color-text: #FFFFFF;
+  --color-text-secondary: #757575;
+
+  --font-size-medium: 1.5rem;
+  --font-size-big: 2.5rem;
+
+  --game-status-color: var(--color-accent);
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  box-sizing: border-box;
+  background-image: linear-gradient(to left top, var(--color-primary-light), var(--color-primary-dark));
+  height: 100vh;
+  overflow: hidden;
+}
+
+// jvectormap wrong height bugfix
+.jvectormap-container  {
+  width: 100%;
+  height: 100%;
+}

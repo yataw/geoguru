@@ -1,0 +1,29 @@
+
+.leaderboard {
+    grid-column: 1 / 4;
+
+    background-color: var(--color-primary);
+    color: var(--color-text);
+
+    display: flex;
+    flex-direction: column;
+
+    &__header {
+        flex: 0 0 6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: var(--font-size-big);
+        font-weight: 600;
+    }
+
+    &__trophy {
+        width: 4rem;
+        height: 4rem;
+        fill: #03A9F4;
+    }
+
+    &__table {
+        flex: 1 0;
+    }
+}

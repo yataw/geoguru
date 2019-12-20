@@ -1,0 +1,28 @@
+{
+  "name": "projectbootstrap",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "connect": "^3.6.6",
+    "cookie": "^0.3.1",
+    "cookie-parser": "^1.4.3",
+    "debug": "~2.6.9",
+    "errorhandler": "^1.5.0",
+    "events": "^3.0.0",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "method-override": "^3.0.0",
+    "morgan": "^1.9.1",
+    "multer": "^1.4.1",
+    "nconf": "^0.10.0",
+    "random": "^2.1.1",
+    "serve-favicon": "^2.5.0",
+    "socket.io": "^2.2.0",
+    "winston": "^3.1.0",
+    "yargs": "^12.0.5"
+  }
+}

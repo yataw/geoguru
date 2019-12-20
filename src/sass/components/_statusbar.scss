@@ -1,0 +1,47 @@
+
+.statusbar {
+    position: relative;
+    padding-top: 1rem;
+    color: var(--color-text);
+
+    &__current-target {
+        display: flex;
+        justify-content: center;
+        font-size: 3rem;
+        vertical-align: baseline;
+
+        span {
+            position: relative;
+            vertical-align: inherit;
+        }
+
+        & span::before {
+            content: 'find';
+
+            vertical-align: baseline;
+            font-size: 1.2rem;
+
+            color: var(--color-text-secondary);
+            margin-right: .5rem;
+        }
+    }
+
+    &__info {
+        position: absolute;
+        width: 6.5rem;
+        top: 0;
+        right: 0;
+        color: var(--color-text-secondary);
+        font-size: 1rem;
+
+        th {
+            text-align: left;
+        }
+
+        td {
+            text-align: right;
+        }
+    }
+}
+
+

@@ -1,0 +1,722 @@
+[
+  {
+    "id": "5df8f50089c04c06f8d20ee5",
+    "name": "King Casey",
+    "score": 6358,
+    "scoreChange": 47.12
+  },
+  {
+    "id": "5df8f50008fc89ee263af403",
+    "name": "Melanie Hurst",
+    "score": 6949,
+    "scoreChange": -57.9
+  },
+  {
+    "id": "5df8f500e51a30d564d74b04",
+    "name": "Natalia Mason",
+    "score": 5163,
+    "scoreChange": 0.59
+  },
+  {
+    "id": "5df8f5004264968d3a0a5c0b",
+    "name": "Allen Rutledge",
+    "score": 7531,
+    "scoreChange": -33.53
+  },
+  {
+    "id": "5df8f5003b78aa3ca9f195f7",
+    "name": "Blanca Hale",
+    "score": 9422,
+    "scoreChange": -20.15
+  },
+  {
+    "id": "5df8f500ed31a16e9369fea9",
+    "name": "Aline Burks",
+    "score": 2658,
+    "scoreChange": 35.15
+  },
+  {
+    "id": "5df8f5009e4fe07fef815431",
+    "name": "Graves Morris",
+    "score": 1523,
+    "scoreChange": -45.56
+  },
+  {
+    "id": "5df8f50025012888bf61f1d0",
+    "name": "Christine Haynes",
+    "score": 7786,
+    "scoreChange": 27.83
+  },
+  {
+    "id": "5df8f500fb2b7a72d9105f3f",
+    "name": "Mccormick Farrell",
+    "score": 8895,
+    "scoreChange": -4.22
+  },
+  {
+    "id": "5df8f500029fbf83264b1c46",
+    "name": "Lawrence Payne",
+    "score": 2289,
+    "scoreChange": 58
+  },
+  {
+    "id": "5df8f5003d372dbfd33d5c3a",
+    "name": "Priscilla Terrell",
+    "score": 8449,
+    "scoreChange": 41.48
+  },
+  {
+    "id": "5df8f500f0cb856c8737e5f2",
+    "name": "Trevino Dalton",
+    "score": 213,
+    "scoreChange": 84.34
+  },
+  {
+    "id": "5df8f5006f5feb4bb17b3cb2",
+    "name": "Saundra Cook",
+    "score": 6962,
+    "scoreChange": 67.03
+  },
+  {
+    "id": "5df8f5006dc61d0db94c9073",
+    "name": "Koch Cunningham",
+    "score": 1459,
+    "scoreChange": 80.7
+  },
+  {
+    "id": "5df8f500643e1d27a9c5fca2",
+    "name": "Hatfield Freeman",
+    "score": 583,
+    "scoreChange": 9
+  },
+  {
+    "id": "5df8f500635e8bd3caaebd7c",
+    "name": "Golden Meyers",
+    "score": 2940,
+    "scoreChange": 55.95
+  },
+  {
+    "id": "5df8f5007a16e55f105757a4",
+    "name": "Rosalie Villarreal",
+    "score": 7187,
+    "scoreChange": 29.28
+  },
+  {
+    "id": "5df8f50047942c74387d296f",
+    "name": "Nielsen Goodwin",
+    "score": 3777,
+    "scoreChange": 20.76
+  },
+  {
+    "id": "5df8f5004272708ecf423201",
+    "name": "Hartman Buckner",
+    "score": 9931,
+    "scoreChange": 88.38
+  },
+  {
+    "id": "5df8f500af6d5c7660a8b7e1",
+    "name": "Luella Mendoza",
+    "score": 7424,
+    "scoreChange": 62.18
+  },
+  {
+    "id": "5df8f50029d8f59af8f0d4de",
+    "name": "Melton Obrien",
+    "score": 5051,
+    "scoreChange": -72.69
+  },
+  {
+    "id": "5df8f500e332b26ddb17e6c8",
+    "name": "Jacobs Hayes",
+    "score": 1190,
+    "scoreChange": -3.31
+  },
+  {
+    "id": "5df8f5007730c896be3b159f",
+    "name": "Elsa Hodges",
+    "score": 6594,
+    "scoreChange": 45.39
+  },
+  {
+    "id": "5df8f5001969a080b0c18bac",
+    "name": "Josefina Haley",
+    "score": 2892,
+    "scoreChange": -3.06
+  },
+  {
+    "id": "5df8f500ed3a584af2122269",
+    "name": "Alejandra Lara",
+    "score": 7007,
+    "scoreChange": -96.15
+  },
+  {
+    "id": "5df8f50099d7c8b77f3fe64f",
+    "name": "Castillo Zamora",
+    "score": 9806,
+    "scoreChange": 44.96
+  },
+  {
+    "id": "5df8f5009f2ce32151eceaf5",
+    "name": "Matilda Winters",
+    "score": 8314,
+    "scoreChange": -81.41
+  },
+  {
+    "id": "5df8f500fc1dce0337aba928",
+    "name": "Wiggins Lambert",
+    "score": 4051,
+    "scoreChange": -28.18
+  },
+  {
+    "id": "5df8f500c9dde22c1c24dd7e",
+    "name": "Vargas Stone",
+    "score": 5712,
+    "scoreChange": -45.48
+  },
+  {
+    "id": "5df8f5009ccad473893b1012",
+    "name": "Minnie Benjamin",
+    "score": 2136,
+    "scoreChange": -82.2
+  },
+  {
+    "id": "5df8f500a298db0295c27c33",
+    "name": "Vicki Wall",
+    "score": 5158,
+    "scoreChange": -84.42
+  },
+  {
+    "id": "5df8f5001ccfc51b4d3f78d6",
+    "name": "Colleen Hays",
+    "score": 9245,
+    "scoreChange": 19.07
+  },
+  {
+    "id": "5df8f5009de11ac00126f469",
+    "name": "Lilia Carey",
+    "score": 7869,
+    "scoreChange": -90.24
+  },
+  {
+    "id": "5df8f5005886da34d731f03b",
+    "name": "Lloyd Mcfarland",
+    "score": 5954,
+    "scoreChange": 32.02
+  },
+  {
+    "id": "5df8f500a0de90c0bedc93e3",
+    "name": "Camille Ayers",
+    "score": 364,
+    "scoreChange": 8.33
+  },
+  {
+    "id": "5df8f5006ef8d43e6d9a2e85",
+    "name": "Hilda Mcgowan",
+    "score": 1224,
+    "scoreChange": 92.66
+  },
+  {
+    "id": "5df8f500312c20ed0473264f",
+    "name": "Anna Waters",
+    "score": 3825,
+    "scoreChange": -11.61
+  },
+  {
+    "id": "5df8f500579cc44f1748bd8f",
+    "name": "Lourdes Shelton",
+    "score": 5574,
+    "scoreChange": 6.59
+  },
+  {
+    "id": "5df8f500b72a399fe1ad9fcc",
+    "name": "Vinson Hubbard",
+    "score": 3861,
+    "scoreChange": 11.71
+  },
+  {
+    "id": "5df8f500b10f2fe8404e8c76",
+    "name": "Taylor House",
+    "score": 6408,
+    "scoreChange": 23.73
+  },
+  {
+    "id": "5df8f500689c3afeca2fc2ee",
+    "name": "Winnie Duke",
+    "score": 3054,
+    "scoreChange": 68.6
+  },
+  {
+    "id": "5df8f50039b5e8b93e9041dd",
+    "name": "June Robbins",
+    "score": 2468,
+    "scoreChange": 68.63
+  },
+  {
+    "id": "5df8f50048eebd0c8bff0909",
+    "name": "Curtis Davis",
+    "score": 4914,
+    "scoreChange": 63.67
+  },
+  {
+    "id": "5df8f500a7f77ec1c96e8e0d",
+    "name": "Black Clemons",
+    "score": 5332,
+    "scoreChange": -31.28
+  },
+  {
+    "id": "5df8f500743f82dc2d3dc9b5",
+    "name": "Cardenas Bush",
+    "score": 413,
+    "scoreChange": -1
+  },
+  {
+    "id": "5df8f500b494b03c13fc9deb",
+    "name": "Conway Jensen",
+    "score": 1349,
+    "scoreChange": 73.97
+  },
+  {
+    "id": "5df8f500710b01fc29fab52d",
+    "name": "Hamilton Miranda",
+    "score": 8521,
+    "scoreChange": 28.99
+  },
+  {
+    "id": "5df8f500610508c135e36d42",
+    "name": "Holder Albert",
+    "score": 6845,
+    "scoreChange": -75.32
+  },
+  {
+    "id": "5df8f500b4fffb68f9ea8742",
+    "name": "Kristina Buchanan",
+    "score": 435,
+    "scoreChange": -65.74
+  },
+  {
+    "id": "5df8f5000de2d530c738aa55",
+    "name": "Harriet Boyer",
+    "score": 2223,
+    "scoreChange": -83.3
+  },
+  {
+    "id": "5df8f500f7c9829c9efd826a",
+    "name": "Bernard Manning",
+    "score": 8667,
+    "scoreChange": 31.43
+  },
+  {
+    "id": "5df8f500036970b68e6ae236",
+    "name": "Lester Lott",
+    "score": 8457,
+    "scoreChange": -15.26
+  },
+  {
+    "id": "5df8f500ae3c3e96b14fed2f",
+    "name": "Ola Guy",
+    "score": 3543,
+    "scoreChange": -16.92
+  },
+  {
+    "id": "5df8f500630f55865a1e0291",
+    "name": "Parker Ramirez",
+    "score": 3990,
+    "scoreChange": -55.19
+  },
+  {
+    "id": "5df8f500b12d4f921ff67e08",
+    "name": "Watts Fletcher",
+    "score": 9626,
+    "scoreChange": 64.19
+  },
+  {
+    "id": "5df8f5002f404b5ba0c83469",
+    "name": "Henson Hunter",
+    "score": 7712,
+    "scoreChange": -33.66
+  },
+  {
+    "id": "5df8f5003dc9453071143bf4",
+    "name": "Hinton Robertson",
+    "score": 9788,
+    "scoreChange": -97.41
+  },
+  {
+    "id": "5df8f500a35e98e85e763fea",
+    "name": "Francine Schwartz",
+    "score": 7596,
+    "scoreChange": 26.39
+  },
+  {
+    "id": "5df8f5009f4e49de350b1e43",
+    "name": "Ross Tucker",
+    "score": 8113,
+    "scoreChange": 7.83
+  },
+  {
+    "id": "5df8f500f43b0f15c08f1a39",
+    "name": "Tina Roberts",
+    "score": 1966,
+    "scoreChange": 64.3
+  },
+  {
+    "id": "5df8f500be96a15274002bbb",
+    "name": "Klein Drake",
+    "score": 2097,
+    "scoreChange": -38.52
+  },
+  {
+    "id": "5df8f5007610adeda249a912",
+    "name": "Rhodes Burch",
+    "score": 6421,
+    "scoreChange": 61.54
+  },
+  {
+    "id": "5df8f500d45b8285e4599c66",
+    "name": "Wilkins Carlson",
+    "score": 3512,
+    "scoreChange": 88.36
+  },
+  {
+    "id": "5df8f50057305e60ae045048",
+    "name": "Karina Russo",
+    "score": 7406,
+    "scoreChange": -7.12
+  },
+  {
+    "id": "5df8f5000dc03c9574e91b10",
+    "name": "Hickman Gonzales",
+    "score": 1415,
+    "scoreChange": 39.91
+  },
+  {
+    "id": "5df8f5006f98cd139b994ea2",
+    "name": "Gale Smith",
+    "score": 7283,
+    "scoreChange": -98.16
+  },
+  {
+    "id": "5df8f500f61d3451994a5cee",
+    "name": "Cathleen Bowman",
+    "score": 471,
+    "scoreChange": 44.21
+  },
+  {
+    "id": "5df8f500900e10f52484f175",
+    "name": "Mcconnell Kim",
+    "score": 7096,
+    "scoreChange": 88.27
+  },
+  {
+    "id": "5df8f500bfe10810065fc579",
+    "name": "Franks Woodard",
+    "score": 4740,
+    "scoreChange": 19.63
+  },
+  {
+    "id": "5df8f5005c8a1d52366ab22c",
+    "name": "Mayra Castaneda",
+    "score": 7043,
+    "scoreChange": -82.66
+  },
+  {
+    "id": "5df8f500f8f316245322f84e",
+    "name": "Morton Chapman",
+    "score": 9485,
+    "scoreChange": -3.62
+  },
+  {
+    "id": "5df8f5005ef25b7604800ef7",
+    "name": "Brittney Mcdowell",
+    "score": 4485,
+    "scoreChange": -57.74
+  },
+  {
+    "id": "5df8f500c6dd83dedb299bff",
+    "name": "Poole Carter",
+    "score": 2493,
+    "scoreChange": -98.62
+  },
+  {
+    "id": "5df8f5003641a422b06a4a09",
+    "name": "Lila Marshall",
+    "score": 1217,
+    "scoreChange": -54.73
+  },
+  {
+    "id": "5df8f500a19aaa42f94ef7c1",
+    "name": "Duncan David",
+    "score": 6327,
+    "scoreChange": -78.25
+  },
+  {
+    "id": "5df8f50008f76aded06066ed",
+    "name": "Marian Gillespie",
+    "score": 9675,
+    "scoreChange": 11.93
+  },
+  {
+    "id": "5df8f5005fbf22a1e6ba3745",
+    "name": "Herman Velazquez",
+    "score": 19,
+    "scoreChange": 17.75
+  },
+  {
+    "id": "5df8f5009d95bca03fdcb038",
+    "name": "Carissa Alvarez",
+    "score": 1185,
+    "scoreChange": -19.17
+  },
+  {
+    "id": "5df8f50054f39e1ae2d4e1e2",
+    "name": "Gregory Tyson",
+    "score": 7455,
+    "scoreChange": -39.69
+  },
+  {
+    "id": "5df8f50044c14dd5b15a5360",
+    "name": "Dawn Huff",
+    "score": 5785,
+    "scoreChange": 30.1
+  },
+  {
+    "id": "5df8f500a35e3663b14b382f",
+    "name": "Tasha Sandoval",
+    "score": 745,
+    "scoreChange": 86.81
+  },
+  {
+    "id": "5df8f5002d5747c8945930bd",
+    "name": "Lindsey Henson",
+    "score": 439,
+    "scoreChange": 9.86
+  },
+  {
+    "id": "5df8f500226e067ebd03d2eb",
+    "name": "Helga Lindsey",
+    "score": 3795,
+    "scoreChange": 96.82
+  },
+  {
+    "id": "5df8f500b6600b2fc27dd25e",
+    "name": "Maude Hardy",
+    "score": 7585,
+    "scoreChange": 42.75
+  },
+  {
+    "id": "5df8f500d4a537476258f721",
+    "name": "Humphrey Stevenson",
+    "score": 6482,
+    "scoreChange": -87.68
+  },
+  {
+    "id": "5df8f5007d0b15fea74f376b",
+    "name": "Wilma Chambers",
+    "score": 5990,
+    "scoreChange": 23.56
+  },
+  {
+    "id": "5df8f500e155d74f08f3fe7b",
+    "name": "Short Huber",
+    "score": 3195,
+    "scoreChange": 64.33
+  },
+  {
+    "id": "5df8f500149a1b891e875cf2",
+    "name": "Claire Wong",
+    "score": 9295,
+    "scoreChange": 81.55
+  },
+  {
+    "id": "5df8f5006fa997405bbf9002",
+    "name": "Julie Bird",
+    "score": 2209,
+    "scoreChange": -50.89
+  },
+  {
+    "id": "5df8f5008c268cde30a0ab81",
+    "name": "Walker Rosario",
+    "score": 1214,
+    "scoreChange": -80.6
+  },
+  {
+    "id": "5df8f500a46224117c8e20e6",
+    "name": "Bell Foley",
+    "score": 1084,
+    "scoreChange": -48.62
+  },
+  {
+    "id": "5df8f5000fd0d5ce60710687",
+    "name": "Hodges Blevins",
+    "score": 6066,
+    "scoreChange": 61.48
+  },
+  {
+    "id": "5df8f500349ccc8c9449c9b1",
+    "name": "Olga Kaufman",
+    "score": 3994,
+    "scoreChange": 8.5
+  },
+  {
+    "id": "5df8f500563f5c21e9eb6a90",
+    "name": "Mindy Mercer",
+    "score": 8834,
+    "scoreChange": -13.37
+  },
+  {
+    "id": "5df8f50051c4e931e9c269e0",
+    "name": "Abby Schroeder",
+    "score": 2294,
+    "scoreChange": 44.55
+  },
+  {
+    "id": "5df8f5004aaa4e5248babdf9",
+    "name": "Mcneil Johnston",
+    "score": 1794,
+    "scoreChange": -57.32
+  },
+  {
+    "id": "5df8f5007d78ee0a8b7a0716",
+    "name": "Angeline Macias",
+    "score": 6445,
+    "scoreChange": -68.47
+  },
+  {
+    "id": "5df8f50091465796b22080bf",
+    "name": "White Langley",
+    "score": 5530,
+    "scoreChange": 41.43
+  },
+  {
+    "id": "5df8f500843383c084a50701",
+    "name": "Webster Suarez",
+    "score": 5146,
+    "scoreChange": 69.32
+  },
+  {
+    "id": "5df8f500f98368ec0800f061",
+    "name": "Kelly Mann",
+    "score": 9669,
+    "scoreChange": 92.39
+  },
+  {
+    "id": "5df8f500f4a60302b862cb5a",
+    "name": "April Mcclain",
+    "score": 9689,
+    "scoreChange": 20.85
+  },
+  {
+    "id": "5df8f5002a24cd54462f9e43",
+    "name": "Janette Pitts",
+    "score": 3021,
+    "scoreChange": 37.04
+  },
+  {
+    "id": "5df8f500523fd52fda471921",
+    "name": "Simone Sears",
+    "score": 4065,
+    "scoreChange": 14.91
+  },
+  {
+    "id": "5df8f500d91b09b2c48c104c",
+    "name": "Nona Figueroa",
+    "score": 3438,
+    "scoreChange": 10.85
+  },
+  {
+    "id": "5df8f50086df04b5f32bdfb1",
+    "name": "Avery Galloway",
+    "score": 1418,
+    "scoreChange": 50.75
+  },
+  {
+    "id": "5df8f5004e21edf901460c94",
+    "name": "Le Valdez",
+    "score": 4515,
+    "scoreChange": 39.28
+  },
+  {
+    "id": "5df8f5002ca3de6e8246180e",
+    "name": "Branch Trujillo",
+    "score": 3660,
+    "scoreChange": 92.96
+  },
+  {
+    "id": "5df8f500a3136955b26c4251",
+    "name": "Paulette Weaver",
+    "score": 4160,
+    "scoreChange": -49.64
+  },
+  {
+    "id": "5df8f500cfc9af67df08ac90",
+    "name": "Pearl Landry",
+    "score": 3166,
+    "scoreChange": 26.26
+  },
+  {
+    "id": "5df8f500ece78a5db3e4479d",
+    "name": "Burt Franklin",
+    "score": 6552,
+    "scoreChange": 84.5
+  },
+  {
+    "id": "5df8f50039fd1489dfa24a87",
+    "name": "Janie Booth",
+    "score": 7342,
+    "scoreChange": 12.45
+  },
+  {
+    "id": "5df8f500cfd2394b147cbdc4",
+    "name": "Leanne Rivera",
+    "score": 4303,
+    "scoreChange": -79.3
+  },
+  {
+    "id": "5df8f5007f838143e40f0798",
+    "name": "Alyce Wilkerson",
+    "score": 4825,
+    "scoreChange": -22.23
+  },
+  {
+    "id": "5df8f50070c698bd2d60ceff",
+    "name": "Hester Mckay",
+    "score": 1672,
+    "scoreChange": -27.94
+  },
+  {
+    "id": "5df8f500d0e04f42f8fccd98",
+    "name": "Bobbie Bartlett",
+    "score": 3585,
+    "scoreChange": 64.64
+  },
+  {
+    "id": "5df8f500049695160be1623a",
+    "name": "Lyons Doyle",
+    "score": 254,
+    "scoreChange": -49.93
+  },
+  {
+    "id": "5df8f500d27ca2b26e6a236f",
+    "name": "Dorothy Stewart",
+    "score": 9440,
+    "scoreChange": 47.55
+  },
+  {
+    "id": "5df8f500ef84dcefabab9f25",
+    "name": "Victoria Bryant",
+    "score": 8817,
+    "scoreChange": -31.32
+  },
+  {
+    "id": "5df8f50018a186be84a10d86",
+    "name": "Katheryn Mcknight",
+    "score": 1575,
+    "scoreChange": -69.37
+  },
+  {
+    "id": "5df8f5000dbdd79f90c4f416",
+    "name": "Woods Banks",
+    "score": 4678,
+    "scoreChange": -61.14
+  }
+]

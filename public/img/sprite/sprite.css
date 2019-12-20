@@ -1,0 +1,261 @@
+.icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-image: url(sprite.svg);
+}
+.icon-error {
+  width: 24px;
+  height: 24px;
+  background-position: 0 0;
+}
+.icon-error_outline {
+  width: 24px;
+  height: 24px;
+  background-position: -40px 0;
+}
+.icon-equalizer {
+  width: 24px;
+  height: 24px;
+  background-position: -80px 0;
+}
+.icon-new_releases {
+  width: 24px;
+  height: 24px;
+  background-position: -120px 0;
+}
+.icon-not_interesteddo_not_disturb {
+  width: 24px;
+  height: 24px;
+  background-position: -160px 0;
+}
+.icon-replay {
+  width: 24px;
+  height: 24px;
+  background-position: -200px 0;
+}
+.icon-volume_down {
+  width: 24px;
+  height: 24px;
+  background-position: -240px 0;
+}
+.icon-volume_mute {
+  width: 24px;
+  height: 24px;
+  background-position: -280px 0;
+}
+.icon-volume_off {
+  width: 24px;
+  height: 24px;
+  background-position: -320px 0;
+}
+.icon-volume_up {
+  width: 24px;
+  height: 24px;
+  background-position: -360px 0;
+}
+.icon-chat {
+  width: 24px;
+  height: 24px;
+  background-position: -400px 0;
+}
+.icon-comment {
+  width: 24px;
+  height: 24px;
+  background-position: -440px 0;
+}
+.icon-emailmailmarkunreadlocal_post_office {
+  width: 24px;
+  height: 24px;
+  background-position: -480px 0;
+}
+.icon-forumquestion_answer {
+  width: 24px;
+  height: 24px;
+  background-position: -520px 0;
+}
+.icon-mail_outline {
+  width: 24px;
+  height: 24px;
+  background-position: -560px 0;
+}
+.icon-lightbulb {
+  width: 24px;
+  height: 24px;
+  background-position: -600px 0;
+}
+.icon-clearclose {
+  width: 24px;
+  height: 24px;
+  background-position: 0 -40px;
+}
+.icon-insert_chartpollassessment {
+  width: 24px;
+  height: 24px;
+  background-position: -40px -40px;
+}
+.icon-keyboard_arrow_down {
+  width: 24px;
+  height: 24px;
+  background-position: -80px -40px;
+}
+.icon-keyboard_arrow_left {
+  width: 24px;
+  height: 24px;
+  background-position: -120px -40px;
+}
+.icon-keyboard_arrow_right {
+  width: 24px;
+  height: 24px;
+  background-position: -160px -40px;
+}
+.icon-keyboard_arrow_up {
+  width: 24px;
+  height: 24px;
+  background-position: -200px -40px;
+}
+.icon-keyboard_backspace {
+  width: 24px;
+  height: 24px;
+  background-position: -240px -40px;
+}
+.icon-keyboard_return {
+  width: 24px;
+  height: 24px;
+  background-position: -280px -40px;
+}
+.icon-keyboard_tab {
+  width: 24px;
+  height: 24px;
+  background-position: -320px -40px;
+}
+.icon-check {
+  width: 24px;
+  height: 24px;
+  background-position: -360px -40px;
+}
+.icon-menu {
+  width: 24px;
+  height: 24px;
+  background-position: -400px -40px;
+}
+.icon-keyboard_control {
+  width: 24px;
+  height: 24px;
+  background-position: -440px -40px;
+}
+.icon-more_vert {
+  width: 24px;
+  height: 24px;
+  background-position: -480px -40px;
+}
+.icon-grouppeople {
+  width: 24px;
+  height: 24px;
+  background-position: -520px -40px;
+}
+.icon-person {
+  width: 24px;
+  height: 24px;
+  background-position: -560px -40px;
+}
+.icon-person_add {
+  width: 24px;
+  height: 24px;
+  background-position: -600px -40px;
+}
+.icon-person_outlineperm_identity {
+  width: 24px;
+  height: 24px;
+  background-position: 0 -80px;
+}
+.icon-thumb_down_alt {
+  width: 24px;
+  height: 24px;
+  background-position: -40px -80px;
+}
+.icon-thumb_up_alt {
+  width: 24px;
+  height: 24px;
+  background-position: -80px -80px;
+}
+.icon-check_box {
+  width: 24px;
+  height: 24px;
+  background-position: -120px -80px;
+}
+.icon-check_box_outline_blank {
+  width: 24px;
+  height: 24px;
+  background-position: -160px -80px;
+}
+.icon-star_half {
+  width: 24px;
+  height: 24px;
+  background-position: -200px -80px;
+}
+.icon-star_outline {
+  width: 24px;
+  height: 24px;
+  background-position: -240px -80px;
+}
+.icon-account_circle {
+  width: 24px;
+  height: 24px;
+  background-position: -280px -80px;
+}
+.icon-bug_report {
+  width: 24px;
+  height: 24px;
+  background-position: -320px -80px;
+}
+.icon-build {
+  width: 24px;
+  height: 24px;
+  background-position: -360px -80px;
+}
+.icon-delete {
+  width: 24px;
+  height: 24px;
+  background-position: -400px -80px;
+}
+.icon-done {
+  width: 24px;
+  height: 24px;
+  background-position: -440px -80px;
+}
+.icon-done_all {
+  width: 24px;
+  height: 24px;
+  background-position: -480px -80px;
+}
+.icon-favorite {
+  width: 24px;
+  height: 24px;
+  background-position: -520px -80px;
+}
+.icon-favorite_outline {
+  width: 24px;
+  height: 24px;
+  background-position: -560px -80px;
+}
+.icon-settings {
+  width: 24px;
+  height: 24px;
+  background-position: -600px -80px;
+}
+.icon-zoom_in {
+  width: 24px;
+  height: 24px;
+  background-position: 0 -120px;
+}
+.icon-zoom_out {
+  width: 24px;
+  height: 24px;
+  background-position: -40px -120px;
+}
+.icon-people_alt {
+  width: 24px;
+  height: 24px;
+  background-position: -80px -120px;
+}
+

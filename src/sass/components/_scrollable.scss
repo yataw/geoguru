@@ -1,0 +1,56 @@
+
+.scrollable-class {
+    position: absolute;
+    right: 2px;
+    width: 5px;
+    min-height: 10px;
+
+    &:before {
+        position: absolute;
+        content: '';
+        background: var(--color-accent);
+        border-radius: 7px;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        transition: opacity 0.2s linear;
+    }
+
+    &.simplebar-visible:before {
+        /* When hovered, remove all transitions from drag handle */
+        opacity: 1;
+        transition: opacity 0s linear;
+    }
+}
+
+
+.simplebar-track.simplebar-vertical {
+    top: 0;
+    width: 11px;
+}
+
+.simplebar-track.simplebar-vertical .scrollable-class:before {
+    top: 2px;
+    bottom: 2px;
+}
+
+.simplebar-track.simplebar-horizontal {
+    left: 0;
+    height: 11px;
+}
+
+.simplebar-track.simplebar-horizontal .scrollable-class:before {
+    height: 100%;
+    left: 2px;
+    right: 2px;
+}
+
+.simplebar-track.simplebar-horizontal .scrollable-class {
+    right: auto;
+    left: 0;
+    top: 2px;
+    height: 7px;
+    min-height: 0;
+    min-width: 10px;
+    width: auto;
+}

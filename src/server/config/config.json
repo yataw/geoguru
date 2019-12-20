@@ -1,0 +1,52 @@
+{
+  "port": 8080,
+  "mongoose": {
+    "uri": "mongodb://localhost:27017/geoguru",
+    "options": {
+      "server": {
+        "socketOptions": {
+          "keepAlive": 1
+        }
+      }
+    }
+  },
+  "session": {
+    "secret": "superPuperSecret",
+    "key": "sid",
+    "cookie": {
+      "path": "/",
+      "httpOnly": true,
+      "maxAge": null
+    }
+  },
+  "events": {
+    "CONNECTION": "connection",
+    "SETNAME": "setname",
+    "SIGNIN": "signin",
+    "SIGNOUT": "signout",
+    "DISCONNECT": "disconnect",
+    "TASKSTART": "taskstart",
+    "TASKEND": "taskend",
+    "VOTE": "vote",
+    "CHATMESSAGE": "chatmessage"
+  },
+  "gameParameters": {
+    "tasksInSet": 10,
+    "phasesDuration": {
+      "active": 10000,
+      "passive": 10000
+    }
+  },
+  "earthConsts": {
+    "lat": {
+      "min": -90,
+      "max": -90
+    },
+    "lng": {
+      "min": -180,
+      "max": 180
+    },
+    "radius": 6371,
+    "maxDist": 20015.086
+  }
+}

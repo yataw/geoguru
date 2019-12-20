@@ -1,0 +1,802 @@
+[
+  {
+    "id": "5dfabcd3040b21402ca12209",
+    "name": "Castro Warner",
+    "sigma": 14.41,
+    "color": 12747765,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd326e88d5b22f235e4",
+    "name": "Allen Lester",
+    "sigma": 12.32,
+    "color": 10409579,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd33c9d25b8ffe217e4",
+    "name": "Mercer Petersen",
+    "sigma": 18.07,
+    "color": 642480,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd3ab6271a98681e5ce",
+    "name": "Melendez Melendez",
+    "sigma": 9,
+    "color": 12151581,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd38b07fddb18a7fcd6",
+    "name": "Sullivan Gray",
+    "sigma": 25.7,
+    "color": 13003545,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd3f35eb7bcc74e02df",
+    "name": "Antonia Kane",
+    "sigma": 19.08,
+    "color": 4023114,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd33a29b6df912fba04",
+    "name": "Trisha Cunningham",
+    "sigma": 27.93,
+    "color": 5541595,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd32804286d2abe0330",
+    "name": "Claudia Shannon",
+    "sigma": 25.74,
+    "color": 15561269,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd3f4bb20a8812d6d2e",
+    "name": "Mccall Ramos",
+    "sigma": 20.67,
+    "color": 4652640,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd39987a2af8f09bea1",
+    "name": "Brennan Russell",
+    "sigma": 4.47,
+    "color": 15796073,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd35c4f9e829fd2d98b",
+    "name": "Miranda Sanford",
+    "sigma": 20.27,
+    "color": 11693319,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd34c74d324343b9b23",
+    "name": "Park Porter",
+    "sigma": 28.12,
+    "color": 7763851,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd32b13ae21895f402a",
+    "name": "Mitchell Price",
+    "sigma": 22.8,
+    "color": 3986740,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd3d12213f351c47b79",
+    "name": "Charlene Emerson",
+    "sigma": 21.23,
+    "color": 6849357,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd3bcb97e3e3fd31235",
+    "name": "Anderson Mckinney",
+    "sigma": 24.89,
+    "color": 16619014,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd303950504f2ff5e81",
+    "name": "Emerson Mcbride",
+    "sigma": 17.11,
+    "color": 6110861,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd38263fa52a8480ab8",
+    "name": "Talley Dunlap",
+    "sigma": 20.06,
+    "color": 4163506,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd3cbc2ac30eea7ca77",
+    "name": "Lee Gordon",
+    "sigma": 29.37,
+    "color": 9689692,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd3b99c9ef3bbaba506",
+    "name": "Espinoza Hinton",
+    "sigma": 3.68,
+    "color": 13838439,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd356806d6429b6e67e",
+    "name": "Kline Pruitt",
+    "sigma": 24.11,
+    "color": 870832,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd35a593de19a20b8f5",
+    "name": "Calderon Giles",
+    "sigma": 22.73,
+    "color": 3238792,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd346161b4868536311",
+    "name": "Dominguez Snyder",
+    "sigma": 22.63,
+    "color": 11757896,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd3f90d1b7c535361dc",
+    "name": "Kinney Vaughn",
+    "sigma": 13.94,
+    "color": 2554286,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd3568def2c75aa3687",
+    "name": "Wendi Gonzalez",
+    "sigma": 24.51,
+    "color": 454859,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd3b032d5a7daf921fd",
+    "name": "Francine Blanchard",
+    "sigma": 8.77,
+    "color": 343696,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd359382b3111cf3780",
+    "name": "Lakeisha Rojas",
+    "sigma": 6.56,
+    "color": 3975338,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd31e73e2d151cf1110",
+    "name": "Courtney Hutchinson",
+    "sigma": 21.65,
+    "color": 5036003,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd3586048eed58c3046",
+    "name": "Bruce Wade",
+    "sigma": 6.8,
+    "color": 7462801,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd3b0b1fae74915bd50",
+    "name": "Giles Finley",
+    "sigma": 17.33,
+    "color": 9134294,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd37aa30decf9ac06ab",
+    "name": "Barron Bradley",
+    "sigma": 7.93,
+    "color": 1666763,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd3d76d5b2d52c05b1d",
+    "name": "Hilda Stevenson",
+    "sigma": 13.83,
+    "color": 16090550,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd3d905762e425e1271",
+    "name": "Dennis Cline",
+    "sigma": 26.36,
+    "color": 15391946,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd308a11f7ab30aea92",
+    "name": "Yates Holland",
+    "sigma": 22.73,
+    "color": 16135400,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd3270d8a23523b16f0",
+    "name": "Dodson Walker",
+    "sigma": 20.55,
+    "color": 10404406,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd3f25ddb04af479aeb",
+    "name": "Darcy Schwartz",
+    "sigma": 12.28,
+    "color": 9807696,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd3c72c3bbe49393fb6",
+    "name": "Hampton Ferrell",
+    "sigma": 3.05,
+    "color": 7097104,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd352eb54029ad2dc69",
+    "name": "Ramsey Hoffman",
+    "sigma": 15.96,
+    "color": 5648328,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd36e77709fe41d9d5f",
+    "name": "Santos Wagner",
+    "sigma": 18,
+    "color": 7046714,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd31488dec2359c6da5",
+    "name": "Adkins Aguirre",
+    "sigma": 15.43,
+    "color": 13297931,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd3336e13094b6aaf94",
+    "name": "Beach Farley",
+    "sigma": 2.72,
+    "color": 15340495,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd3b1e66466cd218a06",
+    "name": "Ursula Griffin",
+    "sigma": 5.8,
+    "color": 576194,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd3b53e01fcb6927f36",
+    "name": "Everett Morrison",
+    "sigma": 10.85,
+    "color": 16195481,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd36a5efbbcb6d4cd7b",
+    "name": "Justice Anthony",
+    "sigma": 13.47,
+    "color": 3845007,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd38f7c54ca855ab9dd",
+    "name": "Jeanie Noble",
+    "sigma": 24.23,
+    "color": 12583729,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd33cce6311702c1518",
+    "name": "Carrillo Rich",
+    "sigma": 3.98,
+    "color": 7405043,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd3b0486654111e4d29",
+    "name": "Robert Webster",
+    "sigma": 26.93,
+    "color": 6720742,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd32931977ec97d68a1",
+    "name": "Gonzales Bray",
+    "sigma": 4.36,
+    "color": 1894823,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd370561187f2d6054c",
+    "name": "Willa House",
+    "sigma": 10.69,
+    "color": 15481516,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd309a3375879ef9497",
+    "name": "Shannon Sears",
+    "sigma": 5.11,
+    "color": 1722711,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd33d828de67e98f3ca",
+    "name": "Lorene Grant",
+    "sigma": 26.39,
+    "color": 12808963,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd3a1edca40659cb97f",
+    "name": "Jacquelyn Ashley",
+    "sigma": 8.96,
+    "color": 12180164,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd3d19453392d49c10b",
+    "name": "Evans Delacruz",
+    "sigma": 22.4,
+    "color": 9050562,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd37ccc9563be76d5df",
+    "name": "Flynn Vega",
+    "sigma": 11.53,
+    "color": 1478181,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd3fff8334136863ebe",
+    "name": "Rosemarie Cole",
+    "sigma": 16.73,
+    "color": 3079123,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd315727c83abb5a5a5",
+    "name": "Reba Richmond",
+    "sigma": 15.65,
+    "color": 13934089,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd3c01850a6f9d8e8e6",
+    "name": "Carole Nguyen",
+    "sigma": 1.45,
+    "color": 9419392,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd33e65bb856ab527b3",
+    "name": "Louella Barker",
+    "sigma": 4.69,
+    "color": 3203306,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd33df1665d985f5308",
+    "name": "Phillips Stark",
+    "sigma": 4.36,
+    "color": 16621047,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd3b98d638896a53f0f",
+    "name": "Luna Bennett",
+    "sigma": 19.34,
+    "color": 14977494,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd3945278e44e1efd0c",
+    "name": "Chasity Tillman",
+    "sigma": 27.9,
+    "color": 16458553,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd351ba396c81df4877",
+    "name": "Abbott Bauer",
+    "sigma": 4.44,
+    "color": 2561809,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd324eda32b518f2eb3",
+    "name": "Atkins Pierce",
+    "sigma": 28.32,
+    "color": 10767022,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd379ef9befa22090c9",
+    "name": "Reyes George",
+    "sigma": 19.24,
+    "color": 8437944,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd3370fb979e89d900f",
+    "name": "Mcknight Brewer",
+    "sigma": 22.38,
+    "color": 4534510,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd3494bdf0d2f72f0d6",
+    "name": "Frye Waters",
+    "sigma": 10.47,
+    "color": 7265801,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd3c7619440d3e5d971",
+    "name": "Gilliam Hubbard",
+    "sigma": 8.74,
+    "color": 8035014,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd330cfc39cfabdada1",
+    "name": "Wilma Serrano",
+    "sigma": 2.08,
+    "color": 11365882,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd334b24ec72b6e4cf8",
+    "name": "Kristine Key",
+    "sigma": 18.76,
+    "color": 2372823,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd38a9ee4a64432282e",
+    "name": "Pat Nieves",
+    "sigma": 4.8,
+    "color": 6805126,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd3f3e92588b7858266",
+    "name": "Levine Arnold",
+    "sigma": 14.26,
+    "color": 16566597,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd360442dc76d0cedf4",
+    "name": "Kelsey Washington",
+    "sigma": 6.76,
+    "color": 5711216,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd354d10234e78e5943",
+    "name": "Berg Houston",
+    "sigma": 11.89,
+    "color": 9081890,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd34b4e94071278adc9",
+    "name": "Janell Hogan",
+    "sigma": 16.64,
+    "color": 12907299,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd3fbb476a45fe011ee",
+    "name": "Angela Montoya",
+    "sigma": 19.9,
+    "color": 13754197,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd3ebc9f2e75ec8a84e",
+    "name": "Terri Jimenez",
+    "sigma": 6.36,
+    "color": 5683506,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd310ee4e5cc0290063",
+    "name": "Janine Fuller",
+    "sigma": 7.89,
+    "color": 8966452,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd3014edfbe14bc58a6",
+    "name": "Latoya Pena",
+    "sigma": 28.99,
+    "color": 11048034,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd3d7fd83def63402db",
+    "name": "Tania Fischer",
+    "sigma": 9.21,
+    "color": 5544932,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd37b5c484eaa1bf479",
+    "name": "Stefanie Berg",
+    "sigma": 22.41,
+    "color": 5793319,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd3e801d4e52cbd3270",
+    "name": "June Roth",
+    "sigma": 15.03,
+    "color": 11864816,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd39584aa13d8acc2fc",
+    "name": "Castaneda Peterson",
+    "sigma": 8.83,
+    "color": 11407752,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd3c60ac09af3d88f37",
+    "name": "Rivers Campos",
+    "sigma": 1.87,
+    "color": 3712150,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd373e425c4a6715239",
+    "name": "Vilma Allison",
+    "sigma": 13.51,
+    "color": 13416524,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd38a6ebaf0a88bd502",
+    "name": "Galloway Reilly",
+    "sigma": 11.36,
+    "color": 8756207,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd327b8e5f68ebae877",
+    "name": "Zamora Gould",
+    "sigma": 8.94,
+    "color": 121965,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd370e35d510391201d",
+    "name": "Marcy Pearson",
+    "sigma": 26.74,
+    "color": 14255307,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd3e28ef2d75a5ab839",
+    "name": "Tabitha Herrera",
+    "sigma": 6.79,
+    "color": 353180,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd32649a0dd6f7fd35e",
+    "name": "Harvey Townsend",
+    "sigma": 21.02,
+    "color": 4832758,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd3bbb2b56d9a1dc938",
+    "name": "Burch Davenport",
+    "sigma": 25.74,
+    "color": 11689280,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd33d613035ee961750",
+    "name": "Benita Reynolds",
+    "sigma": 15.4,
+    "color": 2606020,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd35cf0966356f2fda8",
+    "name": "Larsen Lott",
+    "sigma": 19.88,
+    "color": 12021798,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd33f1ac9ecc84e4bdd",
+    "name": "Celeste Hudson",
+    "sigma": 3,
+    "color": 9553450,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd3a7c961ed77e21438",
+    "name": "Best Gibbs",
+    "sigma": 6.91,
+    "color": 14743947,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd37d19b0d4efd7aab0",
+    "name": "Fay Ruiz",
+    "sigma": 2.34,
+    "color": 6507834,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd396b0ddac927ceb28",
+    "name": "Jordan Whitfield",
+    "sigma": 18.22,
+    "color": 5340167,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd316c0c1051c037ca7",
+    "name": "Colleen Sutton",
+    "sigma": 8.3,
+    "color": 2916537,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd37e95fc059c587fe2",
+    "name": "Vance Stafford",
+    "sigma": 26.67,
+    "color": 9012908,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd39ccbd94dd72d7ebb",
+    "name": "Bass Kirby",
+    "sigma": 26.27,
+    "color": 2599880,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd3ef7da0418050e6e2",
+    "name": "England Curry",
+    "sigma": 10.42,
+    "color": 15309519,
+    "inGame": true,
+    "score": 0
+  },
+  {
+    "id": "5dfabcd3ca6c6b7403eb50f8",
+    "name": "Kerri Sherman",
+    "sigma": 29.58,
+    "color": 3984694,
+    "inGame": true,
+    "score": 0
+  }
+]
