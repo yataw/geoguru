@@ -1,5 +1,3 @@
-const path = require('path');
-const util = require('util');
 const http = require('http');
 
 exports.HttpError = class HttpError extends Error {

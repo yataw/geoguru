@@ -1,4 +1,4 @@
-const capitals = require('../data/capitals');
+const capitals = require('../backend/data/capitals');
 const length = capitals.length;
 
 class Task {
@@ -19,4 +19,4 @@ class Task {
     }
 }
 
-module.exports = Task;
+export default Task;

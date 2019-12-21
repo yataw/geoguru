@@ -1,24 +1,4 @@
-{
-  "port": 8080,
-  "mongoose": {
-    "uri": "mongodb://localhost:27017/geoguru",
-    "options": {
-      "server": {
-        "socketOptions": {
-          "keepAlive": 1
-        }
-      }
-    }
-  },
-  "session": {
-    "secret": "superPuperSecret",
-    "key": "sid",
-    "cookie": {
-      "path": "/",
-      "httpOnly": true,
-      "maxAge": null
-    }
-  },
+export default {
   "events": {
     "CONNECTION": "connection",
     "SETNAME": "setname",

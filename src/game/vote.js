@@ -1,7 +1,7 @@
-const config = require('../config').get('earthConsts');
+import general from '../general';
 
-const R = config.radius;
-const maxDist = config.maxDist;
+const R = general.earthConsts.radius;
+const maxDist = general.earthConsts.maxDist;
 
 class Vote {
     constructor({id, vote, answer}) {
@@ -22,4 +22,4 @@ class Vote {
     }
 }
 
-module.exports = Vote;
+export default Vote;

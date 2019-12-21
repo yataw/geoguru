@@ -9,6 +9,8 @@ import Main from "./components/main";
 import Footer from "./components/footer";
 import Popup from "./components/popup";
 
+import Game from './game/game';
+
 
 // TODO data validation
 // TODO test
@@ -34,7 +36,9 @@ class App extends React.Component {
     }
 
     onChooseName = (name) => {
-        const socket = window.io.connect('');
+        const isDevelopment = process.env.NODE_ENV === 'development';
+        const hostname = isDevelopment ? `localhost:${process.env.REACT_APP_DEV_BACKEND_PORT}` : '';
+        const socket = window.io.connect(hostname);
 
         socket.on('taskstart', task => this.setState({task, answer: null, votes: {}}));
         socket.on('taskend', ({answer, votes, players}) => this.setState({answer, votes, players, task: null}));

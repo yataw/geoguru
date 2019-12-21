@@ -1,10 +1,9 @@
-const cookie = require('cookie');
-const config = require('../config');
-const HttpError = require('../error').HttpError;
-const log = require('../logger')(module);
+// const HttpError = require('../error').HttpError;
+// const log = require('../logger')(module);
 
-const Game = require('../game/game');
-const Events = config.get('events');
+import general from '../../general';
+import Game from '../../game/game';
+const Events = general.events;
 
 module.exports = function (server, log) {
     const io = require('socket.io')(server, {logger: log});

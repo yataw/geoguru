@@ -1,13 +1,15 @@
-const log = require('../logger')(module);
-const config = require('../config');
-const Events = config.get('events');
-const GameParameters = config.get('gameParameters');
-const Player = require('./player');
-const Task = require('./task');
-const Vote = require('./vote');
-const random = require('random')
+// const log = require('../logger')(module);
 
+import general from '../general';
+import Player from './player';
+import Task from './task';
+import Vote from './vote';
+
+const random = require('random');
 const botsData = require('./botsdata.json');
+
+const Events = general.events;
+const GameParameters = general.gameParameters;
 
 const MAX_TASKS = GameParameters.tasksInSet;
 const ACTIVE_DURATION = GameParameters.phasesDuration.active;
@@ -174,4 +176,4 @@ Game.prototype.states = {
     PASSIVE_PHASE: 1
 };
 
-module.exports = Game;
+export default Game;
