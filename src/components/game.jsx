@@ -1,14 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import colorValues from './colorvalues.json';
+import $ from 'jquery';
+import mapData from '../mapdata';
+import * as jvm from 'jvectormap-next';
 
-const $ = window.$;
 
 class Game extends React.Component {
-
     constructor(props) {
         super(props);
+
+        jvm($);
+        mapData($);
 
         this.state = {
             markers: [],
@@ -49,9 +52,8 @@ class Game extends React.Component {
     };
 
     componentDidMount() {
-        this.map = new window.jvm.Map({
-            container: window.$('#game-map'),
-            map: 'world_mill_en',
+        $('#game-map').vectorMap({
+            map: 'world_mill',
             panOnDrag: true,
             focusOn: {
                 x: 0.5,
@@ -63,13 +65,15 @@ class Game extends React.Component {
             series: {
                 regions: [{
                     scale: ['#C8EEFF', '#0071A4'],
-                    normalizeFunction: 'polynomial',
-                    values: colorValues
+                    normalizeFunction: 'polynomial'
                 }]
             },
             zoomButtons: false,
             onRegionTipShow: function(e){e.preventDefault()},
         });
+
+        this.map =  $('#world-map').vectorMap('get', 'mapObject');
+        console.log(this.map)
 
         this.map.container.click(this.onClick);
     }
