@@ -25,6 +25,30 @@
     &__settings {
     }
 
+    &__offline {
+        display: flex;
+        margin: 0 5rem;
+
+        &-text {
+            &:first-letter {
+                color: red;
+            }
+        }
+
+        &-btn {
+            outline: none;
+            border: 1px solid transparent;
+            margin-left: .5rem;
+            padding: .2rem .3rem;
+            cursor: pointer;
+            background-color: var(--color-accent);
+
+            &:hover {
+                box-shadow: 0 .5rem 1rem rgba($color-white, .15);
+            }
+        }
+    }
+
     &__statistics {
         justify-self: flex-end;
         margin-left: auto;

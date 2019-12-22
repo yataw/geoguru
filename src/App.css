@@ -42,6 +42,9 @@ html {
   display: grid;
   grid-template-columns: [page-start] 2fr [main-start] repeat(10, [col-start] minmax(min-content, 1fr) [col-end]) [main-end] 2fr [page-end];
   grid-template-rows: [header-start] 5vh [header-end main-start] 90vh [main-end footer-start] 5vh [footer-end page-end]; }
+  @media only screen and (max-width: 75em) {
+    .root {
+      grid-template-columns: [main-start] repeat(10, [col-start] minmax(min-content, 1fr) [col-end]) [main-end]; } }
 
 :root {
   --color-primary: #212529;
@@ -107,6 +110,20 @@ body {
     .user-nav__settings:hover, .user-nav__statistics:hover, .user-nav__user:hover {
       background-color: var(--color-secondary);
       border-bottom: 2px solid var(--color-accent); }
+  .user-nav__offline {
+    display: flex;
+    margin: 0 5rem; }
+    .user-nav__offline-text:first-letter {
+      color: red; }
+    .user-nav__offline-btn {
+      outline: none;
+      border: 1px solid transparent;
+      margin-left: .5rem;
+      padding: .2rem .3rem;
+      cursor: pointer;
+      background-color: var(--color-accent); }
+      .user-nav__offline-btn:hover {
+        box-shadow: 0 0.5rem 1rem rgba(255, 255, 255, 0.15); }
   .user-nav__statistics {
     justify-self: flex-end;
     margin-left: auto; }

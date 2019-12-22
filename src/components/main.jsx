@@ -79,7 +79,7 @@ class Main extends React.Component {
                         task={this.state.task}
                     ></Game>
                 </div>
-                <Chat messages={this.state.messages} onMessage={this.onMessage}></Chat>
+                <Chat messages={this.state.messages} onMessage={this.onMessage} offline={this.props.offline}></Chat>
             </main>
         )
     }

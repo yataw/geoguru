@@ -1,3 +1,15 @@
+
+// COLORS
+$color-white: #fff;
+$color-black: #000;
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em; // 1200px
+$bp-large: 62.5em; // 1000px
+$bp-medium: 50em; // 800px
+$bp-small: 37.5em; // 600px
+
+
 *, *::after, *::before {
   margin: 0;
   padding: 0;
@@ -28,10 +40,11 @@ html {
   display: grid;
   grid-template-columns: [page-start]  2fr [main-start] repeat(10, [col-start] minmax(min-content, 1fr) [col-end]) [main-end] 2fr [page-end];
   grid-template-rows: [header-start] 5vh [header-end main-start] 90vh [main-end footer-start] 5vh [footer-end page-end];
-}
 
-$color-white: #fff;
-$color-black: #000;
+  @media only screen and (max-width: $bp-largest) {
+    grid-template-columns: [main-start] repeat(10, [col-start] minmax(min-content, 1fr) [col-end]) [main-end];
+  }
+}
 
 :root {
   --color-primary: #212529;

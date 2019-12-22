@@ -24,4 +24,4 @@ app.use(require('./middleware/sendHttpError'));
 
 // TODO add favicon
 // app.use(favicon('public/icons/favicon.ico')); // возвращает favicon, если перешли по /favicon.ico
-app.use(express.static(path.join(__dirname, '../../build'))); // роут на статические (неизменяемые) ресурсы из директории public
+app.use(express.static(path.join(__dirname, '../../build'))); // В production статические ресурсы отдает сервер из backend

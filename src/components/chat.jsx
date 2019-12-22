@@ -83,7 +83,8 @@ class Chat extends React.Component {
                         className="chat__input"
                         value={this.state.text}
                         onChange={this.onChange}
-                        placeholder={'type your text here...'}
+                        placeholder={this.props.offline ? 'Chat is disabled' : 'type your text here...'}
+                        disabled={this.props.offline}
                     />
 
                     <svg className="chat__icon-send" onClick={this.onSubmit}>
