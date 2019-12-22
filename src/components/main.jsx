@@ -20,7 +20,7 @@ class Main extends React.Component {
             messages: []
         }
 
-        this.state.socket.on('chatmessage', this.addMessage);
+        this.socket.on('chatmessage', this.addMessage);
     }
 
     addMessage = (message) => {
@@ -41,6 +41,9 @@ class Main extends React.Component {
         }));
 
         this.setState({...nextProps, markers, markerAddingAvailable: !answer && !!task});
+
+        if (this.socket !== nextProps.socket)
+            this.socket = nextProps.socket;
     }
 
     onAddMarker = marker => {
