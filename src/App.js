@@ -46,12 +46,10 @@ class App extends React.Component {
     }
 
     keepStandalone = () => {
-        console.log('offline')
         const socket = new Emitter();
 
         socket.on('taskstart', task => this.setState({task, answer: null, votes: {}}));
-        socket.on('taskend', ({answer, votes, players}) =>
-            console.log(answer, votes, players) || this.setState({answer, votes, players, task: null}));
+        socket.on('taskend', ({answer, votes, players}) => this.setState({answer, votes, players, task: null}));
 
         this.standaloneGame = new Game();
         this.standaloneGame.addPlayer({id: 1, name: this.state.name, color: '000', socket});
@@ -80,9 +78,7 @@ class App extends React.Component {
     render() {
         return (
             <React.Fragment>
-                {/*// TODO for test*/}
-                {/*{this.state.showPopup ? <Popup onChooseName={this.onChooseName}></Popup> : null}*/}
-                {this.state.showPopup ? this.onChooseName('Alex') : null}
+                {this.state.showPopup ? <Popup onChooseName={this.onChooseName}></Popup> : null}
                 <Header name={this.state.name} offline={this.state.offline} onOffline={this.keepStandalone}/>
                 <Main
                     socket={this.state.socket}
