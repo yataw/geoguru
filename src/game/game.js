@@ -1,15 +1,12 @@
 // const log = require('../logger')(module);
 
-import general from '../general';
+import {Events, GameParameters} from '../general/general';
 import Player from './player';
 import Task from './task';
 import Vote from './vote';
 
 const random = require('random');
 const botsData = require('./botsdata.json');
-
-const Events = general.events;
-const GameParameters = general.gameParameters;
 
 const MAX_TASKS = GameParameters.tasksInSet;
 const ACTIVE_DURATION = GameParameters.phasesDuration.active;
@@ -82,15 +79,17 @@ class Game {
 
         const player = this.players[id];
 
-        socket.on(Events.VOTE, vote => {
+        socket.on(Events.vote, vote => {
             if (player.inGame && this.state === this.states.ACTIVE_PHASE)
                 this.addVote(player, vote)
         });
 
-        socket.on(Events.DISCONNECT, () => {
-            socket.broadcast.emit(Events.SIGNOUT, id);
+        socket.on(Events.disconnect, () => {
+            socket.broadcast.emit(Events.signout, id);
             delete this.players[id];
         });
+
+        socket.emit(Events.getplayers, {players: this.getAllPlayers()});
     };
 
     addVote(player, vote) {
@@ -105,7 +104,7 @@ class Game {
         this.taskNumber++;
         this.calculateBotsVotes();
 
-        this.forEach(({socket}) => socket.emit(Events.TASKSTART, this.task.get()));
+        this.forEach(({socket}) => socket.emit(Events.taskstart, {task: this.task.get()}));
         setTimeout(this.taskEnd.bind(this), ACTIVE_DURATION);
     };
 
@@ -127,7 +126,7 @@ class Game {
     taskEnd() {
         this.state = this.states.PASSIVE_PHASE;
         this.updateScore();
-        this.forEach(({socket}) => socket.emit(Events.TASKEND, {answer: this.task.getAnswer(), votes: this.votes, players: this.getAllPlayers()}));
+        this.forEach(({socket}) => socket.emit(Events.taskend, {answer: this.task.getAnswer(), votes: this.votes, players: this.getAllPlayers()}));
 
         this.votes = {};
 
