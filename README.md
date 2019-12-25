@@ -1,55 +1,31 @@
-# Geo guru
+# About
 
-Проект по курсу "Клиентские приложения". Многопользовательская онлайн игра на знание географических мест. 
+Geoguru - geography game. Train your memory and learn cities.
 
-Необходимо как можно точнее указать требуемое место за ограниченное время. В конце матча можно свериться с ответом и результатами других участников.
+# How to play
 
-## Current state
+- One set consists of 10 rounds.
+- When round starts, the city name appears on the top of the map.
+- You have 10sec to find the city and click it on the map. Then 10sec pause follows.
+- After each round points are recalculated. More accuracy - more points.
+- Try get as much points as possible during a set. There are players scores in "Leader board" section.
 
-- Бесконечное число матчей
-- В вопросах столицы всех государств
-- Поддержка любого количества пользователей
-- Определяется точность ответа и ведется подсчет очков (необходимо хотя бы раз нажать на карту)
+# Features
 
-## Details
+- Muliplayer
+- Offline mode (tested in Chrome)
+- PWA (can be installed to your desktop)
+- Chat
 
-Серверная часть - кластер серверов. Конкретный сервер выбирается в зависимости от географического положения игрока.
+## Stack
 
-## Technology stack
-
-* (http://jvectormap.com/) - библиотека svg-карт
-* React, bootstrap - фронт
-* NodeJS, express - бэк
-* Socket.io, шаблонизатор ejs - и фронт, и бэк
-
-## TODO
-
-### Stage 1
-- [x] Имя пользователя
-- [x] Верстка liderboard
-- [x] Footer
-
-### Stage 2
-- [x] Архитектура клиент-серверного взаимодействия
-- [ ] Раунды
-- [ ] Continues integration
-- [ ] Боты
-
-
-## Requirements
-
-Протестировано на (работает более-менее стабильно):
-
-* Chrome 65+
-* FF 60+
-* Chrome for android 70+
+Node, React.js, sass
 
 
 ## Authors
 
-Ковалев Я.Р.
+@yataw
 
-МФТИ 2019
 
 ## License
 
