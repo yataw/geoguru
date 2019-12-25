@@ -1,6 +1,6 @@
 # About
 
-Geoguru - geography game. Train your memory and learn cities.
+Geoguru is a geography game. Train your memory and learn countries and cities.
 
 # How to play
 
