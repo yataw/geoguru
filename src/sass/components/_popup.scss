@@ -25,6 +25,9 @@
     transform: translate(-50%, -50%) scale(.25);
     transition: all .5s .2s;
 
+    min-width: 40rem;
+    min-height: 25rem;
+
     padding: 3rem;
 
     display: flex;

@@ -1,7 +1,7 @@
-import general from '../general';
+import {EarthConsts} from '../general/general';
 
-const R = general.earthConsts.radius;
-const maxDist = general.earthConsts.maxDist;
+const R = EarthConsts.radius;
+const maxDist = EarthConsts.maxDist;
 
 class Vote {
     constructor({id, vote, answer}) {
