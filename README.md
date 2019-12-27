@@ -4,9 +4,9 @@ Geoguru is a geography game. Train your memory and learn countries and cities.
 
 # How to play
 
-- One set consists of 10 rounds.
-- When a round starts, a city name appears on the top of the map.
-- You have 10sec to find the city and click it on the map. Then a 10sec pause follows.
+- Each set consists of 10 rounds.
+- When a round starts, a city name appears above the map.
+- You have 10sec to find out the city and click it on the map. Then a 10sec pause follows.
 - After each round you get points. More accuracy - more points.
 - Try get as much points as possible during a set. There are players scores in "Leader board" section.
 
