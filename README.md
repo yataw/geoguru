@@ -1,3 +1,7 @@
+# Demo
+
+https://yataw.herokuapp.com/
+
 # About
 
 Geoguru is a geography game. Train your memory and learn countries and cities.
