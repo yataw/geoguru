@@ -19,7 +19,7 @@ const GameParameters = {
     tasksInSet: 10,
     phasesDuration: {
         active: 10000,
-        passive: 10000
+        passive: 5000
     }
 };
 

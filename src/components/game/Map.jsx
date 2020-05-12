@@ -10,13 +10,29 @@ class Map extends Component {
 
         this.mapRef = React.createRef();
         this.map = null;
+        this.drag = false;
     }
 
     componentDidMount() {
         this.map = this.mapRef.current.getMapObject();
-        this.map.container.click(this.onClick);
+        this.map.container.mousedown(this.mouseDown);
+        this.map.container.mousemove(this.mouseMove);
+        this.map.container.mouseup(this.mouseUp);
     }
-    
+
+    mouseDown = () => {
+        this.drag = false;
+    };
+
+    mouseMove = () => {
+        this.drag = true;
+    };
+
+    mouseUp = (e) => {
+        if (!this.drag)
+            this.onClick(e);
+    };
+
     shouldComponentUpdate(nextProps, nextState, nextContext) {
         const {markers} = nextProps;
 

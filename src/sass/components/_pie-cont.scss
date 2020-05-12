@@ -21,7 +21,7 @@
     &__spinner {
         border-radius: 100% 0 0 100% / 50% 0 0 50%;
         z-index: 200;
-        animation: pit-rotate 10s linear forwards;
+        animation: pit-rotate var(--game-loading-animation-duration) linear forwards;
     }
     
     &__filler {
@@ -29,7 +29,7 @@
         left: 50%;
         opacity: 0;
         z-index: 100;
-        animation: pie-opacity 10s steps(1, end) reverse forwards;
+        animation: pie-opacity var(--game-loading-animation-duration) steps(1, end) reverse forwards;
     }
     
     &__mask {
@@ -39,7 +39,7 @@
         background: inherit;
         opacity: 1;
         z-index: 300;
-        animation: pie-opacity 10s steps(1, end) forwards;
+        animation: pie-opacity var(--game-loading-animation-duration) steps(1, end) forwards;
     }
 
     /* TODO: нужен ли animation-play-state? */

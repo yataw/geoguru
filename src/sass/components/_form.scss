@@ -53,6 +53,10 @@
       outline: none;
       box-shadow: 0 1rem 2rem rgba(var(--color-secondary), .1);
       border-bottom: 3px solid var(--color-accent);
+
+      &:invalid + .form__label {
+        color: orangered;
+      }
     }
 
     &:focus:invalid {

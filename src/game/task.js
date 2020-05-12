@@ -4,7 +4,7 @@ const length = capitals.length;
 class Task {
     constructor(taskNumber, maxTasks) {
         const n = Math.floor(Math.random() * length);
-        let {id, city, lat, lng, country, population} = capitals[n];
+        let {id, city_ascii: city, lat, lng, country, population} = capitals[n];
 
         this.task = {id, city, country, taskNumber, maxTasks};
         this.answer = {...this.task, lat, lng, population};

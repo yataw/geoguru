@@ -19,7 +19,12 @@
 
     & > * {
         margin-top: 4rem;
-        margin-bottom: 2rem;
+        //margin-bottom: 2rem;
+
+        @media only screen and (max-width: $bp-medium) {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
     }
 }
 
@@ -35,10 +40,18 @@
     overflow: hidden;
 
     color: var(--color-text);
+
+    @media only screen and (max-width: $bp-medium) {
+        display: none;
+    }
 }
 
 .version {
     position: absolute;
     bottom: 0;
     left: 0;
+
+    @media only screen and (max-width: $bp-medium) {
+        display: none;
+    }
 }

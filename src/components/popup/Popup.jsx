@@ -1,5 +1,6 @@
 import React from 'react';
 import Sprite from '../../assets/img/sprite/sprite.svg';
+import {ReactComponent as Cake} from '../../assets/img/cake.svg'
 
 class Popup extends React.Component {
     constructor(props) {
@@ -8,6 +9,8 @@ class Popup extends React.Component {
         this.state = {
             text: ''
         };
+
+        this.yourNameRef = React.createRef();
     }
 
     componentDidMount() {
@@ -15,51 +18,27 @@ class Popup extends React.Component {
 
         setTimeout(() => {
             trigger.click();
+
             window.history.replaceState(null, null, ' ');
         }, 0);
     }
 
-    onChange = (e) => {
-        const text = e.target.value;
+    onClick = (e) => {
+        if (e.target === document.getElementById('popup-trigger'))
+            return;
 
-        if (text.length <= 20)
-            this.setState({text});
-    };
-
-    onSubmit = (e) => {
-        e.preventDefault();
-        if (this.state.text)
-            this.props.onChooseName(this.state.text);
-
-        this.setState({text: ''});
+        this.props.onPopupClick();
     };
 
     render() {
         return (
-            <div className="popup" id="popup">
+            <div className="popup" id="popup" onClick={this.onClick}>
                 <div className="popup__content">
-                    <form action="#" className="form" onSubmit={this.onSubmit}>
-                        <h3 className='u-margin-bottom-medium'>Please enter your name</h3>
-                        <div className="form__group">
-                            <div className="form__input-cont">
-                                <input type="text" className="form__input" placeholder="Your name" id="name"
-                                       required
-                                       autoComplete="off"
-                                       value={this.state.text}
-                                       onChange={this.onChange}
-                                       autoFocus
-                                />
-                                <svg className="form__group-send" onClick={this.onSubmit}>
-                                    <use xlinkHref={`${Sprite}#icon-keyboard_return`}></use>
-                                </svg>
-                            </div>
-                            <label htmlFor="name" className="form__label">Max 20 characters</label>
-                        </div>
-                        {/* TODO добавить colorPicker: Simonwep/pickr*/}
-                        {/*                        <div className="form__group">
-                            <h3>And pick up your marker color</h3>
-                        </div>*/}
-                    </form>
+                    <h2> Wow! </h2>
+                    <div className='popup__text'>You've found secret functionality</div>
+                    <a href="#popup" className="btn btn_white"> <div className="popup__btn-text">Got it <div className='cake-cont'><Cake className='cake'/></div></div></a>
+                    <div className="popup__cross">✖</div>
+
                 </div>
                 <a href="#popup" style={{display: 'none'}} id='popup-trigger'></a>
             </div>

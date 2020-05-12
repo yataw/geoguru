@@ -8,7 +8,7 @@ import io from 'socket.io-client'
 import Header from "./components/header/Header";
 import Main from "./components/main/Main";
 import Footer from "./components/footer/Footer";
-import Popup from "./components/popup/Popup";
+import EntryPopup from "./components/popup/EntryPopup";
 
 import Game from './game/game';
 
@@ -21,7 +21,7 @@ class App extends React.Component {
         super(props);
 
         const isDevelopment = process.env.NODE_ENV === 'development';
-        const hostname = isDevelopment ? `localhost:${process.env.REACT_APP_DEV_BACKEND_PORT}` : '';
+        const hostname = isDevelopment ? window.location.hostname + ':' + process.env.REACT_APP_DEV_BACKEND_PORT : '';
         const socket = io.connect(hostname);
 
         this.standaloneGame = null;
@@ -43,7 +43,7 @@ class App extends React.Component {
     listenSocket = (socket) => {
         socket.on(Events.taskstart, ({task}) => this.setState({task}));
         socket.on(Events.taskend, ({answer, votes, players}) => this.setState({answer, votes, players}));
-        socket.on(Events.getplayers, ({players}) => console.log(players) || this.setState({players}));
+        socket.on(Events.getplayers, ({players}) => this.setState({players}));
         socket.on(Events.chat_message, this.addMessage);
     };
 
@@ -92,7 +92,7 @@ class App extends React.Component {
     render() {
         return (
             <React.Fragment>
-                {this.state.showPopup ? <Popup onChooseName={this.onChooseName}></Popup> : null}
+                {this.state.showPopup ? <EntryPopup onChooseName={this.onChooseName}></EntryPopup> : null}
                 <Header
                     name={this.state.name}
                     offline={this.state.offline}

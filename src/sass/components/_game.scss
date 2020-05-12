@@ -6,6 +6,10 @@
     overflow: hidden;
     background-color: var(--color-primary);
 
+    @media only screen and (max-width: $bp-medium) {
+        grid-column: 1 / 12;
+    }
+
     &__content {
         position: absolute;
         top: 50%;

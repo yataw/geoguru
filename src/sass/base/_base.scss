@@ -35,14 +35,18 @@ html {
 
 .root {
   font-size: 1.5rem;
-  height: 100%;
+  height: 100vh;
 
   display: grid;
   grid-template-columns: [page-start]  2fr [main-start] repeat(10, [col-start] minmax(min-content, 1fr) [col-end]) [main-end] 2fr [page-end];
-  grid-template-rows: [header-start] 5vh [header-end main-start] 90vh [main-end footer-start] 5vh [footer-end page-end];
+  grid-template-rows: [header-start] 4rem [header-end main-start] 1fr [main-end footer-start] 5rem [footer-end page-end];
 
   @media only screen and (max-width: $bp-largest) {
     grid-template-columns: [main-start] repeat(10, [col-start] minmax(min-content, 1fr) [col-end]) [main-end];
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-template-rows: [header-start] 4rem [header-end main-start] 1fr [main-end];
   }
 }
 
@@ -60,6 +64,7 @@ html {
   --font-size-big: 2.5rem;
 
   --game-status-color: var(--color-accent);
+  --game-loading-animation-duration: 10s;
 }
 
 body {
